@@ -64,3 +64,15 @@ The below colour scheme was generated using [Coolor](https://coolors.co/ "Cooler
 
 ### Breakpoints
 No particular breakpoints will be used in the media queries however, the website is responsive to a minimum of 320px. 
+
+
+### Wireframes
+Three wireframes shown below are examples of what the content of the page will look like when displayed on large, medium and small screens.
+
+Large Screen
+
+Medium Screen
+
+Small Screen
+
+---
