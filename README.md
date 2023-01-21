@@ -40,4 +40,10 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 * The quiz must be interactive and have effects when answers are hovered over.
 * All transitions of the page must be consistent throughout.
 
---- 
+---
+## Design
+
+### Icon
+There will two types of icons used for this webpage: 
+* [Favicon](https://favicon.io/ "Favicon") will be used as a website identifier, this identifier will be visible on the tab and if the website is bookmarked. A favicon is important as it will give the brand recognition and therefore will make the page more identifiable. 
+* [FontAwesome](https://fontawesome.com/ "Font Awesome") will be used for the three categories of difficulty. Furthermore, universal icons will be used meaning the overall user experience will be improved. 
