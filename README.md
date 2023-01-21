@@ -47,3 +47,17 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 There will two types of icons used for this webpage: 
 * [Favicon](https://favicon.io/ "Favicon") will be used as a website identifier, this identifier will be visible on the tab and if the website is bookmarked. A favicon is important as it will give the brand recognition and therefore will make the page more identifiable. 
 * [FontAwesome](https://fontawesome.com/ "Font Awesome") will be used for the three categories of difficulty. Furthermore, universal icons will be used meaning the overall user experience will be improved. 
+
+### Font
+[Google Fonts](https://fonts.google.com/ "Google Fonts") was used to identify which font would best suit a quiz show. I decided to use the 'Rubik' font as it's clear, modern and simplistic. This font will be used for all headers. The next font used in the website will be 'Open Sans'. This font is popular among most websites and will be used for the presentation of questions and answers. A variety of strengths will and font sizes will be used throughout depending on the situation. 
+
+### Colour Scheme
+The below colour scheme was generated using [Coolor](https://coolors.co/ "Coolers"). Strong colours are used in this quiz as a clear distinction is required for the questions and answers. Complimentary colours are then used to tone out the colours so that they aren't too bold. 
+![Colour Scheme](docs/screenshots/color.png "Colour Pallet")
+
+| Colour  | Use |
+| ------  | --- |
+| #1F271B | This colour will be used for the header bar and submit buttons. |
+| #5F0A87 | This colour will be used for the question box. |
+| #E2E2E2 | This colour will be used for the text in all sections. |
+| #C97B84| This colour will be used for the answer box. |
