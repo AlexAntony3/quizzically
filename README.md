@@ -55,9 +55,12 @@ There will two types of icons used for this webpage:
 The below colour scheme was generated using [Coolor](https://coolors.co/ "Coolers"). Strong colours are used in this quiz as a clear distinction is required for the questions and answers. Complimentary colours are then used to tone out the colours so that they aren't too bold. 
 ![Colour Scheme](docs/screenshots/color.png "Colour Pallet")
 
-| Colour  | Use |
+| Colour  | Description |
 | ------  | --- |
 | #1F271B | This colour will be used for the header bar and submit buttons. |
 | #5F0A87 | This colour will be used for the question box. |
 | #E2E2E2 | This colour will be used for the text in all sections. |
 | #C97B84| This colour will be used for the answer box. |
+
+### Breakpoints
+No particular breakpoints will be used in the media queries however, the website is responsive to a minimum of 320px. 
