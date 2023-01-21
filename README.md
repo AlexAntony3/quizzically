@@ -1,5 +1,4 @@
 # Quizzically
----
 ## Introduction
 
 Welcome to Quizzically, a general knowledge quiz with three degrees of difficulty: easy, medium and hard. This quiz is suitable for anyone above the age of 5, and is an interactive website that allows the user to select the correct answer out of 4 multiple choices. 
@@ -20,4 +19,10 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 * As a user, I want to be able to be able to see if my answer is incorrect when submitted. 
 * As a user, I want to be able to reset my quiz and pick different degrees of difficulty.
 * As a user, I want to be able to retry a quiz and not having repeating questions. 
+
+### Site Owners Goals
+* As the site owner, I want to be able to provide challenge user's with the questions. 
+* As the site owner, I want to entice the user to visit and stay on the page.
+* As the site owner, I want to provide a playful and enjoyable experience for the user. 
+* As the site owner, I want to offer the user an interactive way to select the answer. 
 
