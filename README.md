@@ -20,9 +20,16 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 * As a user, I want to be able to reset my quiz and pick different degrees of difficulty.
 * As a user, I want to be able to retry a quiz and not having repeating questions. 
 
-### Site Owners Goals
+### Site Owner's Goals
 * As the site owner, I want to be able to provide challenge user's with the questions. 
 * As the site owner, I want to entice the user to visit and stay on the page.
 * As the site owner, I want to provide a playful and enjoyable experience for the user. 
 * As the site owner, I want to offer the user an interactive way to select the answer. 
+
+### Expectation
+* I expect visibility of a tally of correct and incorrect answers. 
+* I expect multiple choice answers to be presented to the user, one of which is correct.
+* I expect the reset button to function correctly to restart the quiz with different questions.
+* I expect contrasting elements to stand out when compared to the background. 
+* I expect when the logo is clicked, the page is refreshed. 
 
