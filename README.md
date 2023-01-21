@@ -33,3 +33,11 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 * I expect contrasting elements to stand out when compared to the background. 
 * I expect when the logo is clicked, the page is refreshed. 
 
+### Requirements
+* The quiz must present questions according to the difficulty level selected.
+* The quiz must tally the score of incorrect and correct answers. 
+* The page must be easy to read.
+* The quiz must be interactive and have effects when answers are hovered over.
+* All transitions of the page must be consistent throughout.
+
+--- 
