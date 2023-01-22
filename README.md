@@ -95,3 +95,20 @@ Small Screen
 * [Google Fonts](https://fonts.google.com/ "Google Fonts")
 ---
 ## Testing
+---
+## Deployments
+Post completion of coding, the project was added, committed and pushed to github. The github repository was made live completing the following steps:
+
+* Click on the **project repository**.
+
+* Then click on the **settings** section.
+
+* Then select **pages** under the code and automation section in the side navigation bar.
+
+* Change the source to **deplay from a brand**.
+
+* Select the branch `Main/ (root)` and press **save**.
+
+* The website is live on the following link: `https://YOURUSERNAME.github.io/YOURPROJECTNAME/`
+
+* Any future changes can be completed by **adding**, **committing** and **pushing** updates to github
