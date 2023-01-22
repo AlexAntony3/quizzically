@@ -79,3 +79,17 @@ Small Screen
 ## Features
 
 ## Potential Future Additions
+---
+## Technologies used
+### Languages
+* HTML
+* CSS
+* JavaScript
+### Tools
+* [Coolers](https://coolors.co/ "Coolors")
+* [Git](https://git-scm.com/ "Git")
+* [GitHub](https://github.com/ "GitHub")
+* [GitPod](https://www.gitpod.io/ "GitPod")
+### Libraries
+* [Fontawesome](https://fontawesome.com/ "Font Awesome")
+* [Google Fonts](https://fonts.google.com/ "Google Fonts")
