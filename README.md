@@ -67,13 +67,11 @@ No particular breakpoints will be used in the media queries however, the website
 
 
 ### Wireframes
-Three wireframes shown below are examples of what the content of the page will look like when displayed on large, medium and small screens.
+Three wireframes shown below are examples of what the content of the page will look like when displayed on large and small screens. The page will be designed in order to be responsive to all sizes and therefore the large screen and medium screen will exhibit the same presentation with proportional scale. 
 
-Large Screen
+[Large/Medium Screen](docs/screenshots/large-screen.jpg "Large/Medium Screen")
 
-Medium Screen
-
-Small Screen
+[Small Screen](docs/screenshots/small-screen.jpg "Small Screen")
 
 ---
 ## Features
