@@ -78,4 +78,4 @@ Small Screen
 ---
 ## Features
 
-### 
+## Potential Future Additions
