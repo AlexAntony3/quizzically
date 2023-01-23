@@ -31,3 +31,11 @@ h1 {
     font-size: 5rem;
     text-align: center;
 }
+
+/* header */
+
+header {
+    background-color: var(--header);
+    position: fixed;
+    z-index: 1000;
+}
