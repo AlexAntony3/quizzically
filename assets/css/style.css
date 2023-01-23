@@ -13,4 +13,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Rubik', 'Open Sans', sans-serif;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+/* heading */
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    padding: 1rem;
 }
