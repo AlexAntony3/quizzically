@@ -18,6 +18,10 @@
     font-size: 1.6rem;
 }
 
+body {
+    background-color: var(--background-color);
+}
+
 /* heading */
 h1,
 h2,
@@ -55,10 +59,6 @@ header {
     margin-top: 3rem;
 }
 
-.container h2 {
-    color: var(--header);
-}
-
 /* Difficulty buttons */
 
 .difficulty {
@@ -71,7 +71,21 @@ header {
 }
 
 .difficulty:hover {
+    cursor: pointer;
     background-color: rgba(94, 10, 133, 0.5);
     box-shadow: 0 4px 0 rgba(94, 10, 133, 0.2);
 }
 
+.answer-box {
+    background-color: var(--answer);
+    padding: 1rem;
+    margin-inline: auto;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.answer-box:hover {
+    cursor: pointer;
+    background-color: rgba(201, 123, 132, 0.7);
+    box-shadow: 0 4px 0 rgba(201, 123, 132, 0.5);;
+}
