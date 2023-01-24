@@ -36,7 +36,6 @@ h1 {
 
 header {
     background-color: var(--header);
-    position: fixed;
     z-index: 1000;
     width: 100%;
 }
