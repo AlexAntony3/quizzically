@@ -39,3 +39,36 @@ header {
     z-index: 1000;
     width: 100%;
 }
+
+/* game container */
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.container > * {
+    grid-column: 2;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Difficulty buttons */
+
+.difficulty {
+    text-decoration: none;
+    background-color: var(--question);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    margin-inline: auto;
+    border-radius: 2rem;
+}
+
+.difficulty:hover {
+    background-color: rgba(94, 10, 133, 0.5);
+    box-shadow: 0 4px 0;
+}
+
