@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 :root {
-    --header: #1F271B;
+    --header: #191d1d;
     --text-color: #E2E2E2; 
     --question: #5F0A87;
     --answer: #C97B84;
+    --background-color: #837d7d;
     font-size: 62.5%;
 }
 
@@ -54,6 +55,10 @@ header {
     margin-top: 3rem;
 }
 
+.container p {
+    color: var(--header);
+}
+
 /* Difficulty buttons */
 
 .difficulty {
@@ -69,6 +74,6 @@ header {
 
 .difficulty:hover {
     background-color: rgba(94, 10, 133, 0.5);
-    box-shadow: 0 4px 0;
+    box-shadow: 0 4px 0 rgba(94, 10, 133, 0.2);
 }
 
