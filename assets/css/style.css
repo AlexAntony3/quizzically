@@ -55,7 +55,7 @@ header {
     margin-top: 3rem;
 }
 
-.container p {
+.container h2 {
     color: var(--header);
 }
 
