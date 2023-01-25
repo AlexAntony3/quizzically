@@ -16,6 +16,7 @@
     font-family: 'Rubik', 'Open Sans', sans-serif;
     color: var(--text-color);
     font-size: 1.6rem;
+    text-decoration: none;
 }
 
 body {
