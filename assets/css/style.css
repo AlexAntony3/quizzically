@@ -90,3 +90,11 @@ header {
     background-color: rgba(201, 123, 132, 0.7);
     box-shadow: 0 4px 0 rgba(201, 123, 132, 0.5);;
 }
+
+/*reset and home buttons*/
+
+.btn a {
+    background-color: var(--question);
+    padding: 1rem;
+    margin: 0 4rem;
+}
