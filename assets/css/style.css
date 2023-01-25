@@ -94,7 +94,12 @@ header {
 /*reset and home buttons*/
 
 .btn a {
+    margin: 0 2rem;
+}
+
+.btn a i {
+    font-size: 3rem;
+    text-decoration: none;
     background-color: var(--question);
     padding: 1rem;
-    margin: 0 4rem;
 }
