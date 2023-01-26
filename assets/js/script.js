@@ -1,8 +1,12 @@
 const question = document.getElementById("question");
 const options = document.getElementsByClassName("option");
 
+let currentQuestion = [];
+let userAnswer = false;
+let score = 0;
+let questionNumber = 0;
+let possibleQuestions = [];
 
+let questions = [];
 
-fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple")
-.then(res = res.json())
-.then(rawData = console.log(rawData.results))
+const totalQuestions = 10;
