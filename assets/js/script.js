@@ -7,6 +7,6 @@ let score = 0;
 let questionNumber = 0;
 let possibleQuestions = [];
 
-let questions = [];
 
-const totalQuestions = 10;
+
+
