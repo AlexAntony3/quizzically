@@ -6,7 +6,7 @@ let userAnswer = false;
 let score = 0;
 let questionNumber = 0;
 let possibleQuestions = [];
-
+let difficultyLevel = '';
 
 
 

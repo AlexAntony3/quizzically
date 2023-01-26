@@ -15,16 +15,49 @@
             <h1>Quizzically !</h1>
         </a>
     </header>
-    <div class="container">
-        <h2>Select your difficulty:</h2>
-        <a href="/game.html" class="difficulty" id="easy">Easy</a>
-        <a href="/game.html" class="difficulty" id="medium">Medium</a>
-        <a href="/game.html" class="difficulty" id="hard">Hard</a>
-        <h2>Welcome to Quizzically, a quiz designed to test your general knowledge with a variety of difficulties shown
-            above. This is a quiz designed to challenge you and perfect to use as a break from all the coding you've
-            been doing. Enjoy the game and don't forget to leave a comment/like in the socials below.
-        </h2>
-    </div>
+    <section id="home" class="hidden">
+        <div class="container">
+            <h2>Select your difficulty:</h2>
+            <a href="#game" class="difficulty" id="easy">Easy</a>
+            <a href="#game" class="difficulty" id="medium">Medium</a>
+            <a href="#game" class="difficulty" id="hard">Hard</a>
+            <h2>Welcome to Quizzically, a quiz designed to test your general knowledge with a variety of difficulties
+                shown above. This is a quiz designed to challenge you and perfect to use as a break from all the coding
+                you've been doing. Enjoy the game and don't forget to leave a comment/like in the socials below.
+            </h2>
+        </div>
+    </section>
+    <section id="game" class="hidden">
+        <div class="container">
+            <div class="user-score">
+                <span id="correct-score">0</span>/<span>10</span>
+            </div>
+
+            <h2>This is the question displayed ?</h2>
+            <div class="answer-box">
+                <p class="option" data-answer="1">This is answer 1</p>
+            </div>
+            <div class="answer-box">
+                <p class="option" data-answer="2">This is answer 2</p>
+            </div>
+            <div class="answer-box">
+                <p class="option" data-answer="3">This is answer 3</p>
+            </div>
+            <div class="answer-box">
+                <p class="option" data-answer="4">This is answer 4</p>
+            </div>
+            <div class="btn">
+                <a href="index.html" aria-label="link to the home page"><i class="fa-solid fa-house"></i></a>
+                <a href="#" aria-label="link to the end the game and go to the summary page"><i
+                        class="fa-solid fa-flag-checkered"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="summary" class="hidden">
+        <div class="container">
+
+        </div>
+    </section>
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/4971d91d28.js" crossorigin="anonymous"></script>
 </body>
