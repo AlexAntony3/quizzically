@@ -60,6 +60,12 @@ header {
     margin-top: 3rem;
 }
 
+/* score tracker */
+.user-score {
+    text-align: left;
+    margin-left: 10rem;
+}
+
 /* Difficulty buttons */
 
 .difficulty {
@@ -77,6 +83,11 @@ header {
     box-shadow: 0 4px 0 rgba(94, 10, 133, 0.2);
 }
 
+.difficulty:active {
+    transform: scale(0.97)
+}
+
+/* answer box */
 .answer-box {
     background-color: var(--answer);
     padding: 1rem;
@@ -89,6 +100,10 @@ header {
     cursor: pointer;
     background-color: rgba(201, 123, 132, 0.7);
     box-shadow: 0 4px 0 rgba(201, 123, 132, 0.5);;
+}
+
+.answer-box:active {
+    transform: scale(0.97)
 }
 
 /*reset and home buttons*/
