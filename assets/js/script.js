@@ -50,23 +50,24 @@ startQuiz = () => {
 };
 
 genNewQuestion = () => {
-        if (possibleQuestions >= maxQuestions) {
-            displaySummary();
-        } else {
-            questionNumber++;
-            const questionList = Math.floor(Math.random() * possibleQuestions.length);
-            currentQuestion = possibleQuestions[questionList];
-            question.innerText = currentQuestion.question;
+    if (possibleQuestions >= maxQuestions) {
+        displaySummary();
+    } else {
+        questionNumber++;
+        const questionList = Math.floor(Math.random() * possibleQuestions.length);
+        currentQuestion = possibleQuestions[questionList];
+        question.innerText = currentQuestion.question;
 
-            options.forEach(option => {
-                const answer = option.dataset['answer'];
-                option.innerText = currentQuestion['option' + answer];
-            })
+        options.forEach(option => {
+            const answer = option.dataset['answer'];
+            option.innerText = currentQuestion['option' + answer];
+        })
 
-            possibleQuestions.splice(questionList, 1);
+        possibleQuestions.splice(questionList, 1);
 
-            userAnswer = true;
-        }};
+        userAnswer = true;
+    }
+};
 
 options.forEach(option => {
     option.addEventListener("click", e => {
@@ -74,11 +75,16 @@ options.forEach(option => {
 
         userAnswer = false;
         const selectedOption = e.target;
-        console.log(e.target);
         const selectedAnswer = selectedOption.dataset["answer"];
 
+        if (selectedAnswer == currentQuestion.answer) {
+            score++
+            selectedOption.classList.add("correct");
+        } else {
+            selectedOption.classList.add("incorrect");
+        }
         genNewQuestion();
     })
 })
 
-        startQuiz();
+startQuiz();
