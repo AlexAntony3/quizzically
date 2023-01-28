@@ -46,7 +46,6 @@ startQuiz = () => {
     questionNumber = 0;
     score = 0;
     possibleQuestions = [...questions];
-    console.log(possibleQuestions);
     genNewQuestion();
 };
 
@@ -63,11 +62,20 @@ genNewQuestion = () => {
 
     possibleQuestions.splice(questionList, 1);
 
-    acceptingAnswers = true;
+    userAnswer = true;
 };
 
-options.forEach(choice => {
+options.forEach(option => {
+    option.addEventListener("click", e => {
+        if (!userAnswer) return;
 
+        userAnswer = false;
+        const selectedOption = e.target;
+        console.log(e.target);
+        const selectedAnswer = selectedOption.dataset["answer"];
+
+        genNewQuestion();
+    })
 })
 
 startQuiz();
