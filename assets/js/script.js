@@ -79,9 +79,11 @@ options.forEach(option => {
 
         if (selectedAnswer == currentQuestion.answer) {
             score++
-            selectedOption.classList.add("correct");
+            selectedOption.parentElement.classList.add("correct");
+
         } else {
-            selectedOption.classList.add("incorrect");
+            selectedOption.parentElement.classList.add("incorrect");
+            selectedOption.parentElement.classList.remove("incorrect");
         }
         genNewQuestion();
     })

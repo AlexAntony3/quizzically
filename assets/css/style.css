@@ -118,3 +118,13 @@ header {
     background-color: var(--question);
     padding: 1rem;
 }
+
+/* correct and incorrect answers */
+
+.correct {
+    background-color: var(--header);
+}
+
+.incorrect {
+    background-color: var(--question);
+}
