@@ -3,7 +3,8 @@ const options = Array.from(document.getElementsByClassName("option"));
 const easyQ = document.getElementById("easy")
 const mediumQ = document.getElementById("medium")
 const hardQ = document.getElementById("hard")
-
+const gameScreen = document.getElementById("game");
+const summaryScreen = document.getElementById("summary");
 
 let currentQuestion = [];
 let userAnswer = false;
@@ -11,8 +12,7 @@ let score = 0;
 let questionNumber = 0;
 let possibleQuestions = [];
 
-let questions = [
-    {
+let questions = [{
         question: "this is question number 1",
         option1: "answer1",
         option2: "answer2",
@@ -50,20 +50,23 @@ startQuiz = () => {
 };
 
 genNewQuestion = () => {
-    questionNumber++;
-    const questionList = Math.floor(Math.random() * possibleQuestions.length);
-    currentQuestion = possibleQuestions[questionList];
-    question.innerText = currentQuestion.question;
+        if (possibleQuestions >= maxQuestions) {
+            displaySummary();
+        } else {
+            questionNumber++;
+            const questionList = Math.floor(Math.random() * possibleQuestions.length);
+            currentQuestion = possibleQuestions[questionList];
+            question.innerText = currentQuestion.question;
 
-    options.forEach( option => {
-        const answer = option.dataset['answer'];
-        option.innerText = currentQuestion['option' + answer];
-    })
+            options.forEach(option => {
+                const answer = option.dataset['answer'];
+                option.innerText = currentQuestion['option' + answer];
+            })
 
-    possibleQuestions.splice(questionList, 1);
+            possibleQuestions.splice(questionList, 1);
 
-    userAnswer = true;
-};
+            userAnswer = true;
+        }};
 
 options.forEach(option => {
     option.addEventListener("click", e => {
@@ -78,4 +81,4 @@ options.forEach(option => {
     })
 })
 
-startQuiz();
+        startQuiz();
