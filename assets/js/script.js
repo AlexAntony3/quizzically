@@ -7,6 +7,7 @@ const gameScreen = document.getElementById("game");
 const summaryScreen = document.getElementById("summary");
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
+const maxQuestions = 10;
 
 let currentQuestion = [];
 let userAnswer = false;
@@ -24,21 +25,26 @@ difficultyLevel.forEach(level => {
 });
 
 const fetchData = (difficulty) => {
-    fetch(`https://opentdb.com/api.php?amount=5&category=9&difficulty=${difficulty}&type=multiple`)
-    .then(response => response.json())
-    .then(data => questions = [...data.results])
-    .then(() => startQuiz());
+    fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
+        .then(response => response.json())
+        .then(data => questions = [...data.results])
+        .then(() => startQuiz());
+
+    let correctAnswer = [questions.correct_answer];
+    let incorrectAnswer = [questions.incorrect_answer];
+    let optionList = incorrectAnswer;
+    questions.answer = Math.floor(Math.random() * 4), +1;
+    optionList.splice(questions.answer - 1, 0, correctAnswer);
+
+    console.log(correctAnswer);
+
 }
 
 startQuiz = () => {
     questionNumber = 0;
     score = 0;
-    possibleQuestions = [...questions];
     genNewQuestion();
 };
-
-
-const maxQuestions = 10;
 
 
 genNewQuestion = () => {
@@ -46,17 +52,16 @@ genNewQuestion = () => {
         displaySummary();
     } else {
         questionNumber++;
-        const index = Math.floor(Math.random() * possibleQuestions.length);
-        currentQuestion = possibleQuestions[index];
+        const index = Math.floor(Math.random() * questions.length);
+        currentQuestion = questions[index];
         question.innerText = currentQuestion.question;
 
-        options.forEach(option => {
+        options.forEach((option) => {
             const answer = option.dataset['answer'];
             option.innerText = currentQuestion['option' + answer];
         })
 
-        possibleQuestions.splice(index, 1);
-
+        questions.splice(index, 1);
         userAnswer = true;
     }
 };
@@ -80,5 +85,3 @@ options.forEach(option => {
         genNewQuestion();
     })
 })
-
-
