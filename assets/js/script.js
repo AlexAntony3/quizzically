@@ -6,41 +6,58 @@ const hardQ = document.getElementById("hard")
 const gameScreen = document.getElementById("game");
 const summaryScreen = document.getElementById("summary");
 
+const difficultyLevel = [easyQ, mediumQ, hardQ];
+
 let currentQuestion = [];
 let userAnswer = false;
 let score = 0;
 let questionNumber = 0;
 let possibleQuestions = [];
+let difficulty = "";
+
+
+difficultyLevel.forEach(level => {
+    level.addEventListener("click", e => {
+        difficulty = e.target.value;
+        fetchData(difficulty);
+    });
+});
+
 
 let questions = [{
-        question: "this is question number 1",
-        option1: "answer1",
-        option2: "answer2",
-        option3: "answer3",
-        option4: "answer4",
-        answer: 1
+        "difficulty": "easy",
+        "question": "Who is the protagonist in the game &quot;The Walking Dead: Season One&quot;?",
+        "correct_answer": "Lee Everett",
+        "incorrect_answers": [
+            "Clementine",
+            "Kenny",
+            "Rick Grimes"
+        ]
     },
     {
-        question: "this is question number 2",
-        option1: "answer5",
-        option2: "answer6",
-        option3: "answer7",
-        option4: "answer8",
-        answer: 2
+        "difficulty": "hard",
+        "question": "In the game Nuclear Throne, what organization chases the player character throughout the game?",
+        "correct_answer": "The I.D.P.D",
+        "incorrect_answers": [
+            "The Fishmen",
+            "The Bandits",
+            "The Y.V.G.G"
+        ]
     },
     {
-        question: "this is question number 3",
-        option1: "answer9",
-        option2: "answer10",
-        option3: "answer11",
-        option4: "answer12",
-        answer: 3
-    }
+        "difficulty": "medium",
+        "question": "Which of these is not a real character in the cartoon series My Little Pony: Friendship is Magic?",
+        "correct_answer": "Rose Marene",
+        "incorrect_answers": [
+            "Pinkie Pie",
+            "Maud Pie",
+            "Rainbow Dash"
+        ]
+    },
 ];
 
 
 const maxQuestions = 10;
-
 
 startQuiz = () => {
     questionNumber = 0;
@@ -50,12 +67,12 @@ startQuiz = () => {
 };
 
 genNewQuestion = () => {
-    if (possibleQuestions >= maxQuestions) {
+    if (questionNumber == maxQuestions) {
         displaySummary();
     } else {
         questionNumber++;
-        const questionList = Math.floor(Math.random() * possibleQuestions.length);
-        currentQuestion = possibleQuestions[questionList];
+        const index = Math.floor(Math.random() * possibleQuestions.length);
+        currentQuestion = possibleQuestions[index];
         question.innerText = currentQuestion.question;
 
         options.forEach(option => {
@@ -63,7 +80,7 @@ genNewQuestion = () => {
             option.innerText = currentQuestion['option' + answer];
         })
 
-        possibleQuestions.splice(questionList, 1);
+        possibleQuestions.splice(index, 1);
 
         userAnswer = true;
     }
@@ -88,5 +105,9 @@ options.forEach(option => {
         genNewQuestion();
     })
 })
+
+
+
+
 
 startQuiz();
