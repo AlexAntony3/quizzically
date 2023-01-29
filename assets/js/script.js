@@ -14,7 +14,7 @@ let score = 0;
 let questionNumber = 0;
 let possibleQuestions = [];
 let difficulty = "";
-
+let questions = [];
 
 difficultyLevel.forEach(level => {
     level.addEventListener("click", e => {
@@ -23,41 +23,12 @@ difficultyLevel.forEach(level => {
     });
 });
 
-
-let questions = [{
-        "difficulty": "easy",
-        "question": "Who is the protagonist in the game &quot;The Walking Dead: Season One&quot;?",
-        "correct_answer": "Lee Everett",
-        "incorrect_answers": [
-            "Clementine",
-            "Kenny",
-            "Rick Grimes"
-        ]
-    },
-    {
-        "difficulty": "hard",
-        "question": "In the game Nuclear Throne, what organization chases the player character throughout the game?",
-        "correct_answer": "The I.D.P.D",
-        "incorrect_answers": [
-            "The Fishmen",
-            "The Bandits",
-            "The Y.V.G.G"
-        ]
-    },
-    {
-        "difficulty": "medium",
-        "question": "Which of these is not a real character in the cartoon series My Little Pony: Friendship is Magic?",
-        "correct_answer": "Rose Marene",
-        "incorrect_answers": [
-            "Pinkie Pie",
-            "Maud Pie",
-            "Rainbow Dash"
-        ]
-    },
-];
-
-
-const maxQuestions = 10;
+const fetchData = (difficulty) => {
+    fetch(`https://opentdb.com/api.php?amount=5&category=9&difficulty=${difficulty}&type=multiple`)
+    .then(response => response.json())
+    .then(data => questions = [...data.results])
+    .then(() => startQuiz());
+}
 
 startQuiz = () => {
     questionNumber = 0;
@@ -65,6 +36,10 @@ startQuiz = () => {
     possibleQuestions = [...questions];
     genNewQuestion();
 };
+
+
+const maxQuestions = 10;
+
 
 genNewQuestion = () => {
     if (questionNumber == maxQuestions) {
@@ -107,7 +82,3 @@ options.forEach(option => {
 })
 
 
-
-
-
-startQuiz();
