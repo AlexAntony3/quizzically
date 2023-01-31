@@ -30,41 +30,72 @@ const fetchData = (difficulty) => {
         .then(data => questions = [...data.results])
         .then(() => startQuiz());
 
-    let correctAnswer = [questions.correct_answer];
-    let incorrectAnswer = [questions.incorrect_answer];
-    let optionList = incorrectAnswer;
-    questions.answer = Math.floor(Math.random() * 4), +1;
-    optionList.splice(questions.answer - 1, 0, correctAnswer);
-
-    console.log(correctAnswer);
-
 }
 
-startQuiz = () => {
+function startQuiz() {
     questionNumber = 0;
     score = 0;
     genNewQuestion();
 };
+// startQuiz = () => {
+//     questionNumber = 0;
+//     score = 0;
+//     genNewQuestion();
+// };
 
 
-genNewQuestion = () => {
+function genNewQuestion() {
     if (questionNumber == maxQuestions) {
         displaySummary();
     } else {
         questionNumber++;
         const index = Math.floor(Math.random() * questions.length);
         currentQuestion = questions[index];
-        question.innerText = currentQuestion.question;
+        question.innerHTML = currentQuestion.question;
+
+        let correctAnswer = currentQuestion.correct_answer;
+        let incorrectAnswers = currentQuestion.incorrect_answers;
+        const optionList = [...incorrectAnswers, correctAnswer];
+
+        console.log(currentQuestion);
+        console.log(currentQuestion.incorrect_answers[0]);
+        console.log(`This is option list: ${optionList}`);
 
         options.forEach((option) => {
-            const answer = option.dataset['answer'];
-            option.innerText = currentQuestion['option' + answer];
+            const optionNum = option.dataset['answer'];
+            const optionTxt = optionList[optionNum]
+            option.innerText = optionTxt
         })
 
         questions.splice(index, 1);
         userAnswer = true;
     }
 };
+// genNewQuestion = () => {
+//     if (questionNumber == maxQuestions) {
+//         displaySummary();
+//     } else {
+//         questionNumber++;
+//         const index = Math.floor(Math.random() * questions.length);
+//         currentQuestion = questions[index];
+//         question.innerText = currentQuestion.question;
+//         console.log(currentQuestion);
+//         console.log(currentQuestion.incorrect_answers[0]);
+//         console.log(`This is option list: ${optionList}`);
+
+//         options.forEach((option) => {
+//             const answer = option.dataset['answer'];
+//             console.log(`This is option: ${option}`)
+//             option.innerText = currentQuestion['option' + answer];
+//             console.log(option.dataset['incorrect_answer'])
+//             console.log(`This is an answer: ${answer}`);
+//             console.log(`This is the option.inner text: ${currentQuestion['option' + answer]}`)
+//         })
+
+//         questions.splice(index, 1);
+//         userAnswer = true;
+//     }
+// };
 
 options.forEach(option => {
     option.addEventListener("click", e => {
