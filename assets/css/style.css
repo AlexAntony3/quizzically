@@ -62,14 +62,12 @@ header {
 
 /* question tracker */
 .HUD {
-    text-align: left;
-    margin-left: 10rem;
+    display: flex;
+    justify-content: space-evenly;
     text-transform: capitalize;
 }
 
 #score-tracker {
-    text-align: right;
-    margin-right: 10rem;
     font-weight: 800;
 }
 
