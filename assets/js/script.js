@@ -13,7 +13,7 @@ let currentQuestion = [];
 let userAnswer = false;
 let score = 0;
 let questionNumber = 0;
-let possibleQuestions = [];
+let availableQuestions = [];
 let difficulty = "";
 let questions = [];
 
@@ -28,43 +28,44 @@ difficultyLevel.forEach(level => {
 const fetchData = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
         .then(response => response.json())
-        .then(data => questions = [...data.results])
-        .then(() => startQuiz());
+        .then(data => convertedQuestions(data.results))
+        .then((newData) =>  startQuiz(newData))        
 }
 
+const convertedQuestions = listOfQuestions => {
+    return listOfQuestions.map(singleQuestion => {
+        return {
+            question: singleQuestion.question,
+            correctAnswer: singleQuestion.correct_answer,
+            answers: [...singleQuestion.incorrect_answers, singleQuestion.correct_answer]
+        };
+    });
+};
 
-
-function startQuiz() {
+function startQuiz(questions) {
     questionNumber = 0;
     score = 0;
+    availableQuestions = [...questions];
     genNewQuestion();
 };
 
 
-function genNewQuestion() {
+const genNewQuestion = () => {
     if (questionNumber == maxQuestions) {
         displaySummary();
     } else {
         questionNumber++;
-        const index = Math.floor(Math.random() * questions.length);
-        currentQuestion = questions[index];
+        const index = Math.floor(Math.random() * availableQuestions.length);
+        currentQuestion = availableQuestions[index];
         questionRef.innerHTML = currentQuestion.question;
-
-        let correctAnswer = currentQuestion.correct_answer;
-        let incorrectAnswers = currentQuestion.incorrect_answers;
-        const optionList = [...incorrectAnswers, correctAnswer];
-
-        console.log(currentQuestion);
-        console.log(currentQuestion.incorrect_answers[0]);
-        console.log(`This is option list: ${optionList}`);
 
         optionsRef.forEach((option) => {
             const optionNum = option.dataset['answer'];
-            const optionTxt = optionList[optionNum]
-            option.innerText = optionTxt
+            const optionTxt = currentQuestion.answers[optionNum]
+            option.innerHTML = optionTxt
         })
 
-        questions.splice(index, 1);
+        availableQuestions.splice(index, 1);
         userAnswer = true;
     }
 };
