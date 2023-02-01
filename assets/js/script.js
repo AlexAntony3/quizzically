@@ -1,10 +1,10 @@
-const question = document.getElementById("question");
-const options = Array.from(document.getElementsByClassName("option"));
-const easyQ = document.getElementById("easy")
-const mediumQ = document.getElementById("medium")
-const hardQ = document.getElementById("hard")
-const gameScreen = document.getElementById("game");
-const summaryScreen = document.getElementById("summary");
+const questionRef = document.querySelector("#question");
+const optionsRef = Array.from(document.querySelectorAll(".option"));
+const easyQ = document.querySelector("#easy")
+const mediumQ = document.querySelector("#medium")
+const hardQ = document.querySelector("#hard")
+const gameScreen = document.querySelector("#game");
+const summaryScreen = document.querySelector("#summary");
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -16,6 +16,7 @@ let questionNumber = 0;
 let possibleQuestions = [];
 let difficulty = "";
 let questions = [];
+
 
 difficultyLevel.forEach(level => {
     level.addEventListener("click", e => {
@@ -29,8 +30,9 @@ const fetchData = (difficulty) => {
         .then(response => response.json())
         .then(data => questions = [...data.results])
         .then(() => startQuiz());
-
 }
+
+
 
 function startQuiz() {
     questionNumber = 0;
@@ -46,7 +48,7 @@ function genNewQuestion() {
         questionNumber++;
         const index = Math.floor(Math.random() * questions.length);
         currentQuestion = questions[index];
-        question.innerHTML = currentQuestion.question;
+        questionRef.innerHTML = currentQuestion.question;
 
         let correctAnswer = currentQuestion.correct_answer;
         let incorrectAnswers = currentQuestion.incorrect_answers;
@@ -56,7 +58,7 @@ function genNewQuestion() {
         console.log(currentQuestion.incorrect_answers[0]);
         console.log(`This is option list: ${optionList}`);
 
-        options.forEach((option) => {
+        optionsRef.forEach((option) => {
             const optionNum = option.dataset['answer'];
             const optionTxt = optionList[optionNum]
             option.innerText = optionTxt
@@ -67,7 +69,7 @@ function genNewQuestion() {
     }
 };
 
-options.forEach(option => {
+optionsRef.forEach(option => {
     option.addEventListener("click", e => {
         if (!userAnswer) return;
 
