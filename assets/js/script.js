@@ -5,7 +5,8 @@ const mediumQ = document.querySelector("#medium")
 const hardQ = document.querySelector("#hard")
 const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
-const scoreTracker = document.querySelector("#score-tracker")
+const questionTracker = document.querySelector("#question-tracker")
+const questionDifficulty = document.querySelector("#question-difficulty")
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -22,6 +23,7 @@ const difficultyRef = () => {
         level.addEventListener("click", e => {
             e.preventDefault()
             fetchData(e.target.value);
+            questionDifficulty.innerHTML = `Difficulty: ${e.target.value}`;
         });
     });
 };
@@ -57,7 +59,8 @@ const genNewQuestion = () => {
         displaySummary();
     } else {
         questionNumber++;
-        scoreTracker.innerHTML = `${questionNumber} / ${maxQuestions}`;
+        questionTracker.innerHTML = `Question: ${questionNumber} / ${maxQuestions}`;
+
         const index = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[index];
         questionRef.innerHTML = currentQuestion.question;

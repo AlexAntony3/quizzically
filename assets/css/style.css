@@ -60,10 +60,11 @@ header {
     margin-top: 3rem;
 }
 
-/* score tracker */
-.user-score {
+/* question tracker */
+.HUD {
     text-align: left;
     margin-left: 10rem;
+    text-transform: capitalize;
 }
 
 /* Difficulty buttons */
