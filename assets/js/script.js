@@ -5,6 +5,7 @@ const mediumQ = document.querySelector("#medium")
 const hardQ = document.querySelector("#hard")
 const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
+const scoreTracker = document.querySelector("#score-tracker")
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -17,12 +18,12 @@ let availableQuestions = [];
 let questions = [];
 
 const difficultyRef = () => {
-difficultyLevel.forEach(level => {
-    level.addEventListener("click", e => {
-        e.preventDefault()
-        fetchData(e.target.value);
+    difficultyLevel.forEach(level => {
+        level.addEventListener("click", e => {
+            e.preventDefault()
+            fetchData(e.target.value);
+        });
     });
-});
 };
 
 
@@ -30,15 +31,15 @@ const fetchData = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
         .then(response => response.json())
         .then(data => convertedQuestions(data.results))
-        .then((newData) =>  startQuiz(newData))        
+        .then((newData) => startQuiz(newData))
 }
 
 const convertedQuestions = listOfQuestions => {
     return listOfQuestions.map(singleQuestion => {
         return {
-            question:singleQuestion.question,
-            correctAnswer:singleQuestion.correct_answer,
-            answers:[...singleQuestion.incorrect_answers, singleQuestion.correct_answer]
+            question: singleQuestion.question,
+            correctAnswer: singleQuestion.correct_answer,
+            answers: [...singleQuestion.incorrect_answers, singleQuestion.correct_answer]
         };
     });
 };
@@ -56,6 +57,7 @@ const genNewQuestion = () => {
         displaySummary();
     } else {
         questionNumber++;
+        scoreTracker.innerHTML = `${questionNumber} / ${maxQuestions}`;
         const index = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[index];
         questionRef.innerHTML = currentQuestion.question;
@@ -72,25 +74,26 @@ const genNewQuestion = () => {
 };
 
 const checkAnswer = () => {
-optionsRef.forEach(option => {
-    option.addEventListener("click", e => {
-        if (!userAnswer) return;
+    optionsRef.forEach(option => {
+        option.addEventListener("click", e => {
+            if (!userAnswer) return;
 
-        userAnswer = false;
-        const selectedOption = e.target;
-        const selectedAnswer = selectedOption.textContent;
+            userAnswer = false;
+            const selectedOption = e.target;
+            const selectedAnswer = selectedOption.textContent;
 
-        if (selectedAnswer == currentQuestion.correctAnswer) {
-            score++
-            selectedOption.parentElement.classList.add("correct");
+            if (selectedAnswer == currentQuestion.correctAnswer) {
+                score++
+                selectedOption.parentElement.classList.add("correct");
 
-        } else {
-            selectedOption.parentElement.classList.add("incorrect");
-            selectedOption.parentElement.classList.remove("incorrect");
-        }
-        genNewQuestion();
+            } else {
+                selectedOption.parentElement.classList.add("incorrect");
+                selectedOption.parentElement.classList.remove("incorrect");
+            }
+            genNewQuestion();
+        })
     })
-})
 }
+
 
 window.addEventListener('DOMContentLoaded', (e) => difficultyRef(), checkAnswer());
