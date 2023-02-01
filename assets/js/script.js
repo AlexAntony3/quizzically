@@ -3,8 +3,8 @@ const optionsRef = Array.from(document.querySelectorAll(".option"));
 const easyQ = document.querySelector("#easy")
 const mediumQ = document.querySelector("#medium")
 const hardQ = document.querySelector("#hard")
-const gameScreen = document.querySelector("#game");
-const summaryScreen = document.querySelector("#summary");
+const gameScreenRef = document.querySelector("#game");
+const summaryScreenRef = document.querySelector("#summary");
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -14,16 +14,17 @@ let userAnswer = false;
 let score = 0;
 let questionNumber = 0;
 let availableQuestions = [];
-let difficulty = "";
 let questions = [];
 
-
+const difficultyRef = () => {
 difficultyLevel.forEach(level => {
     level.addEventListener("click", e => {
-        difficulty = e.target.value;
-        fetchData(difficulty);
+        e.preventDefault()
+        fetchData(e.target.value);
     });
 });
+};
+
 
 const fetchData = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
@@ -35,14 +36,14 @@ const fetchData = (difficulty) => {
 const convertedQuestions = listOfQuestions => {
     return listOfQuestions.map(singleQuestion => {
         return {
-            question: singleQuestion.question,
-            correctAnswer: singleQuestion.correct_answer,
-            answers: [...singleQuestion.incorrect_answers, singleQuestion.correct_answer]
+            question:singleQuestion.question,
+            correctAnswer:singleQuestion.correct_answer,
+            answers:[...singleQuestion.incorrect_answers, singleQuestion.correct_answer]
         };
     });
 };
 
-function startQuiz(questions) {
+const startQuiz = (questions) => {
     questionNumber = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -70,15 +71,16 @@ const genNewQuestion = () => {
     }
 };
 
+const checkAnswer = () => {
 optionsRef.forEach(option => {
     option.addEventListener("click", e => {
         if (!userAnswer) return;
 
         userAnswer = false;
         const selectedOption = e.target;
-        const selectedAnswer = selectedOption.dataset["answer"];
+        const selectedAnswer = selectedOption.textContent;
 
-        if (selectedAnswer == currentQuestion.answer) {
+        if (selectedAnswer == currentQuestion.correctAnswer) {
             score++
             selectedOption.parentElement.classList.add("correct");
 
@@ -89,3 +91,6 @@ optionsRef.forEach(option => {
         genNewQuestion();
     })
 })
+}
+
+window.addEventListener('DOMContentLoaded', (e) => difficultyRef(), checkAnswer());
