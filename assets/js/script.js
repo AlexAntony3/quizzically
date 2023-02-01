@@ -7,6 +7,7 @@ const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
 const questionTracker = document.querySelector("#question-tracker")
 const questionDifficulty = document.querySelector("#question-difficulty")
+const scoreTracker = document.querySelector("#score-tracker")
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -87,6 +88,7 @@ const checkAnswer = () => {
 
             if (selectedAnswer == currentQuestion.correctAnswer) {
                 score++
+                scoreTracker.innerHTML = `score: ${score}`;
                 selectedOption.parentElement.classList.add("correct");
 
             } else {

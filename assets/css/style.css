@@ -67,6 +67,12 @@ header {
     text-transform: capitalize;
 }
 
+#score-tracker {
+    text-align: right;
+    margin-right: 10rem;
+    font-weight: 800;
+}
+
 /* Difficulty buttons */
 
 .difficulty {
