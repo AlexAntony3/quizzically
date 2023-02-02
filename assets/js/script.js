@@ -9,6 +9,7 @@ const summaryScreenRef = document.querySelector("#summary");
 const questionTracker = document.querySelector("#question-tracker")
 const questionDifficulty = document.querySelector("#question-difficulty")
 const scoreTracker = document.querySelector("#score-tracker")
+const feedback = document.querySelector("#feedback");
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -114,6 +115,13 @@ const displayGame = () => {
 
 const displaySummary = () => {
     gameScreenRef.classList.add("hidden");
+    if (score < 4 ) {
+        feedback.innerHTML = "Congratulations! you completed the quiz, but you need to brush up on your general knowledge";
+    } else if (score < 7) {
+        feedback.innerHTML = "Congratulations! you completed the quiz, you did amazing! but you can always do better";
+    } else {
+        feedback.innerHTML = "Congratulations! you completed the quiz, you'll be number 1 in your local pub quiz!"
+    };
     summaryScreenRef.classList.remove("hidden");
 }
 
