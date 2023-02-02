@@ -127,9 +127,9 @@ header {
 /* correct and incorrect answers */
 
 .correct {
-    background-color: var(--header);
+    background-color: var(--header) !important;
 }
 
 .incorrect {
-    background-color: var(--question);
+    background-color: var(--question) !important;
 }

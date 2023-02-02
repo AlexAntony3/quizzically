@@ -90,15 +90,20 @@ const checkAnswer = () => {
                 score++
                 scoreTracker.innerHTML = `score: ${score}`;
                 selectedOption.parentElement.classList.add("correct");
-
+                setTimeout(() => {
+                    selectedOption.parentElement.classList.remove("correct");
+                    genNewQuestion();
+                }, 1000);
             } else {
                 selectedOption.parentElement.classList.add("incorrect");
-                selectedOption.parentElement.classList.remove("incorrect");
-            }
-            genNewQuestion();
-        })
-    })
-}
+                setTimeout(() => {
+                    selectedOption.parentElement.classList.remove("incorrect");
+                    genNewQuestion();
+                }, 1000);
+            };
+        });
+    });
+};
 
 
 window.addEventListener('DOMContentLoaded', (e) => difficultyRef(), checkAnswer());
