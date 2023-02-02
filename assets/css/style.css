@@ -6,6 +6,8 @@
     --question: #5F0A87;
     --answer: #C97B84;
     --background-color: #837d7d;
+    --incorrect: #bd2b2b;
+    --correct: #095509; 
     font-size: 62.5%;
 }
 
@@ -127,9 +129,9 @@ header {
 /* correct and incorrect answers */
 
 .correct {
-    background-color: var(--header) !important;
+    background-color: var(--correct) !important;
 }
 
 .incorrect {
-    background-color: var(--question) !important;
+    background-color: var(--incorrect) !important;
 }
