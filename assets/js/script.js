@@ -10,6 +10,7 @@ const questionTracker = document.querySelector("#question-tracker")
 const questionDifficulty = document.querySelector("#question-difficulty")
 const scoreTracker = document.querySelector("#score-tracker")
 const feedback = document.querySelector("#feedback");
+const resultsRef = document.querySelector("#results");
 
 const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
@@ -122,6 +123,7 @@ const displaySummary = () => {
     } else {
         feedback.innerHTML = "Congratulations! you completed the quiz, you'll be number 1 in your local pub quiz!"
     };
+    resultsRef.innerHTML = `WOW! you got ${score} correct answers out of a possible ${maxQuestions} questions!`;
     summaryScreenRef.classList.remove("hidden");
 }
 
