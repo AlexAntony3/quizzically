@@ -135,3 +135,9 @@ header {
 .incorrect {
     background-color: var(--incorrect) !important;
 }
+
+/* hiding elements in the game */
+
+.hidden {
+    display: none;
+}

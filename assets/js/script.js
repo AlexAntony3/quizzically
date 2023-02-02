@@ -3,6 +3,7 @@ const optionsRef = Array.from(document.querySelectorAll(".option"));
 const easyQ = document.querySelector("#easy")
 const mediumQ = document.querySelector("#medium")
 const hardQ = document.querySelector("#hard")
+const homeScreenRef = document.querySelector("#home");
 const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
 const questionTracker = document.querySelector("#question-tracker")
@@ -51,6 +52,7 @@ const startQuiz = (questions) => {
     questionNumber = 0;
     score = 0;
     availableQuestions = [...questions];
+    displayGame();
     genNewQuestion();
 };
 
@@ -104,6 +106,16 @@ const checkAnswer = () => {
         });
     });
 };
+
+const displayGame = () => {
+    homeScreenRef.classList.add("hidden");
+    gameScreenRef.classList.remove("hidden");
+}
+
+const displaySummary = () => {
+    gameScreenRef.classList.add("hidden");
+    summaryScreenRef.classList.remove("hidden");
+}
 
 
 window.addEventListener('DOMContentLoaded', (e) => difficultyRef(), checkAnswer());
