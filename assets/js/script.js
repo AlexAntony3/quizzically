@@ -27,7 +27,7 @@ const difficultyRef = () => {
         level.addEventListener("click", e => {
             e.preventDefault()
             fetchData(e.target.value);
-            questionDifficulty.innerHTML = `Difficulty: ${e.target.value}`;
+            questionDifficulty.innerHTML = `Difficulty: <br> ${e.target.value}`;
         });
     });
 };
@@ -64,7 +64,7 @@ const genNewQuestion = () => {
         displaySummary();
     } else {
         questionNumber++;
-        questionTracker.innerHTML = `Question: ${questionNumber} / ${maxQuestions}`;
+        questionTracker.innerHTML = `Question: <br> ${questionNumber} / ${maxQuestions}`;
 
         const index = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[index];
@@ -92,7 +92,7 @@ const checkAnswer = () => {
 
             if (selectedAnswer == currentQuestion.correctAnswer) {
                 score++
-                scoreTracker.innerHTML = `score: ${score}`;
+                scoreTracker.innerHTML = `score: <br> ${score}`;
                 selectedOption.parentElement.classList.add("correct");
                 setTimeout(() => {
                     selectedOption.parentElement.classList.remove("correct");

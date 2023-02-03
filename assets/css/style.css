@@ -2,27 +2,30 @@
 
 :root {
     --header: #191d1d;
-    --text-color: #E2E2E2; 
+    --text-color: #E2E2E2;
     --question: #5F0A87;
     --answer: #C97B84;
     --background-color: #837d7d;
     --incorrect: #bd2b2b;
-    --correct: #095509; 
-    font-size: 62.5%;
+    --correct: #095509;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', 'Open Sans', sans-serif;
-    color: var(--text-color);
-    font-size: 1.6rem;
-    text-decoration: none;
+    border: 0;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     background-color: var(--background-color);
+    font-family: 'Rubik', 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-color);
 }
 
 /* heading */
@@ -30,14 +33,17 @@ h1,
 h2,
 h3 {
     font-weight: 500;
-    padding: 1rem;
+    color: var(--text-color);
 }
 
 /* logo */
 
 h1 {
     font-size: 5rem;
-    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
 }
 
 /* header */
@@ -46,21 +52,32 @@ header {
     background-color: var(--header);
     z-index: 1000;
     width: 100%;
+    height: 8rem;
+    border: none;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    margin: auto;
 }
 
 /* game container */
 
 .container {
     width: 100%;
+    height: calc(100vh - 8rem);
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
 }
 
-.container > * {
+.container> * {
     grid-column: 2;
     text-align: center;
-    margin-top: 3rem;
+    align-items: center;
+    margin-top: 2rem;
 }
+
 
 /* question tracker */
 .HUD {
@@ -82,6 +99,7 @@ header {
     width: 20rem;
     margin-inline: auto;
     border-radius: 2rem;
+    color: var(--text-color);
 }
 
 .difficulty:hover {
@@ -91,27 +109,30 @@ header {
 }
 
 .difficulty:active {
-    transform: scale(0.97)
+    transform: scale(0.97);
 }
 
 /* answer box */
 .answer-box {
     background-color: var(--answer);
-    padding: 1rem;
     margin-inline: auto;
+    padding: 1rem;
     border-radius: 2rem;
     width: 100%;
+    text-align: center;
 }
 
 .answer-box:hover {
     cursor: pointer;
     background-color: rgba(201, 123, 132, 0.7);
-    box-shadow: 0 4px 0 rgba(201, 123, 132, 0.5);;
+    box-shadow: 0 4px 0 rgba(201, 123, 132, 0.5);
+    ;
 }
 
 .answer-box:active {
-    transform: scale(0.97)
+    transform: scale(0.97);
 }
+
 
 /*reset and home buttons*/
 
@@ -124,6 +145,7 @@ header {
     text-decoration: none;
     background-color: var(--question);
     padding: 1rem;
+    color: var(--text-color);
 }
 
 /* correct and incorrect answers */
