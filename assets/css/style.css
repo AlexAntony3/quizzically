@@ -71,7 +71,11 @@ header a {
     grid-template-columns: 2fr 3fr 2fr;
 }
 
-.container> * {
+.container h2 {
+    margin: auto;
+}
+
+.container > * {
     grid-column: 2;
     text-align: center;
     align-items: center;
@@ -100,6 +104,8 @@ header a {
     margin-inline: auto;
     border-radius: 2rem;
     color: var(--text-color);
+    font-size: 1.5rem;
+    font-family: 'Rubik', 'Open Sans', sans-serif;
 }
 
 .difficulty:hover {
@@ -125,12 +131,18 @@ header a {
 .answer-box:hover {
     cursor: pointer;
     background-color: rgba(201, 123, 132, 0.7);
-    box-shadow: 0 4px 0 rgba(201, 123, 132, 0.5);
     ;
 }
 
 .answer-box:active {
     transform: scale(0.97);
+}
+
+.answer-box p {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
