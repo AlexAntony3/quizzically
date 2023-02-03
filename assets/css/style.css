@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 :root {
-    --header: #191d1d;
-    --text-color: #E2E2E2;
-    --question: #5F0A87;
-    --answer: #C97B84;
-    --background-color: #837d7d;
-    --incorrect: #bd2b2b;
-    --correct: #095509;
+    --header: #9a84a1;
+    --text-color: #181717;
+    --question: #513a5c;
+    --answer: #b379a6;
+    --background-color: #e2d4d4;
+    --incorrect: #d31717;
+    --correct: #256125;
 }
 
 * {
@@ -55,11 +55,11 @@ header {
     height: 8rem;
     border: none;
     text-align: center;
+    padding: 1rem;
 }
 
 header a {
     text-decoration: none;
-    margin: auto;
 }
 
 /* game container */
