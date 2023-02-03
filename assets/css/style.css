@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 :root {
-    --header: #9a84a1;
-    --text-color: #181717;
-    --question: #513a5c;
-    --answer: #b379a6;
-    --background-color: #e2d4d4;
+    --header: #463F3A;
+    --text-color: #040303;
+    --question: #8A817C;
+    --answer: #E0AFA0;
+    --background-color: #F4F3EE;
     --incorrect: #d31717;
     --correct: #256125;
 }
@@ -40,6 +40,7 @@ h3 {
 
 h1 {
     font-size: 5rem;
+    color: #F4F3EE;
 }
 
 h2 {
