@@ -23,7 +23,7 @@ html {
 
 body {
     background-color: var(--background-color);
-    font-family: 'Rubik', 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.6rem;
     color: var(--text-color);
 }
@@ -105,7 +105,7 @@ header a {
     border-radius: 2rem;
     color: var(--text-color);
     font-size: 1.5rem;
-    font-family: 'Rubik', 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .difficulty:hover {
