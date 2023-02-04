@@ -19,6 +19,10 @@ let questionNumber = 0;
 let availableQuestions = [];
 let questions = [];
 
+/**
+ * Register what difficulty of questions is selected by the user. 
+ * The difficulty values are fetched and displayed in the game page.
+ */
 const difficultyRef = () => {
     difficultyLevel.forEach(level => {
         level.addEventListener("click", e => {
