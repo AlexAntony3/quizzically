@@ -78,7 +78,11 @@ const startQuiz = (questions) => {
 };
 
 /**
- * 
+ * Function to generate new question.
+ * If a total of 10 questions have been answered, then the summary sceen function is called.
+ * Question number tracker increments according to number of questions answered.
+ * Questions are randomised and displayed according to fetched data.
+ * randomised answers for the relative question is inputted into each data set. 
  */
 const genNewQuestion = () => {
     if (questionNumber == maxQuestions) {
@@ -96,7 +100,7 @@ const genNewQuestion = () => {
             const optionTxt = currentQuestion.answers[optionNum]
             option.innerHTML = optionTxt
         })
-
+        //completed question is removed from available questions index and user is allowed to answer question.
         availableQuestions.splice(index, 1);
         userAnswer = true;
     }
