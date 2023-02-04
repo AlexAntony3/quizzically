@@ -4,10 +4,10 @@ const questionRef = document.querySelector("#question");
 const homeScreenRef = document.querySelector("#home");
 const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
-const questionTracker = document.querySelector("#question-tracker")
-const questionDifficulty = document.querySelector("#question-difficulty")
-const scoreTracker = document.querySelector("#score-tracker")
-const feedback = document.querySelector("#feedback");
+const questionTrackerRef = document.querySelector("#question-tracker")
+const questionDifficultyRef = document.querySelector("#question-difficulty")
+const scoreTrackerRef = document.querySelector("#score-tracker")
+const feedbackRef = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
 const maxQuestions = 10;
@@ -28,7 +28,7 @@ const difficultyRef = () => {
         level.addEventListener("click", e => {
             e.preventDefault()
             fetchData(e.target.value);
-            questionDifficulty.innerHTML = `Difficulty: <br> ${e.target.value}`;
+            questionDifficultyRef.innerHTML = `Difficulty: <br> ${e.target.value}`;
         });
     });
 };
@@ -77,13 +77,15 @@ const startQuiz = (questions) => {
     genNewQuestion();
 };
 
-
+/**
+ * 
+ */
 const genNewQuestion = () => {
     if (questionNumber == maxQuestions) {
         displaySummary();
     } else {
         questionNumber++;
-        questionTracker.innerHTML = `Question: <br> ${questionNumber} / ${maxQuestions}`;
+        questionTrackerRef.innerHTML = `Question: <br> ${questionNumber} / ${maxQuestions}`;
 
         const index = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[index];
@@ -111,7 +113,7 @@ const checkAnswer = () => {
 
             if (selectedAnswer == currentQuestion.correctAnswer) {
                 score++
-                scoreTracker.innerHTML = `score: <br> ${score}`;
+                scoreTrackerRef.innerHTML = `score: <br> ${score}`;
                 selectedOption.parentElement.classList.add("correct");
                 setTimeout(() => {
                     selectedOption.parentElement.classList.remove("correct");
@@ -136,11 +138,11 @@ const displayGame = () => {
 const displaySummary = () => {
     gameScreenRef.classList.add("hidden");
     if (score < 4) {
-        feedback.innerHTML = "You completed the quiz, but you need to brush up on your general knowledge";
+        feedbackRef.innerHTML = "You completed the quiz, but you need to brush up on your general knowledge";
     } else if (score < 7) {
-        feedback.innerHTML = "You completed the quiz, you did amazing! but you can always do better";
+        feedbackRef.innerHTML = "You completed the quiz, you did amazing! but you can always do better";
     } else {
-        feedback.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
+        feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
     };
     resultsRef.innerHTML = `WOW! you scored ${score} out of a possible ${maxQuestions} questions! <br> follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     summaryScreenRef.classList.remove("hidden");
