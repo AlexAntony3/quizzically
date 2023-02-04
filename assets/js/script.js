@@ -46,6 +46,13 @@ const fetchData = (difficulty) => {
         .then((newData) => startQuiz(newData))
 }
 
+/**
+ * Data is converted to required data from the fetched API.
+ * @param {Array} listOfQuestions is mapped into an array containing required information. 
+ * @returns The question stated in the fetched data.
+ * @returns The correct answer in the fetched data.
+ * @returns A randomly assorted array combining the correct and incorrect answers.
+ */
 const convertedQuestions = listOfQuestions => {
     return listOfQuestions.map(singleQuestion => {
         return {
