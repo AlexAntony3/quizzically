@@ -63,7 +63,12 @@ const convertedQuestions = listOfQuestions => {
     });
 };
 
-
+/**
+ * pre-requisite parameters are set and questions array are spread into an available questions array.
+ * displayGame function is called.
+ * genNewQuestion function is called.
+ * @param {Array} questions list of questions from the API. 
+ */
 const startQuiz = (questions) => {
     questionNumber = 0;
     score = 0;
