@@ -4,7 +4,9 @@
     --header: #463F3A;
     --text-color: #040303;
     --question: #8A817C;
+    --light-question: rgba(173, 130, 107, 0.5);
     --answer: #E0AFA0;
+    --answer-hover: rgba(221, 98, 60, 0.8);
     --background-color: #F4F3EE;
     --incorrect: #d31717;
     --correct: #256125;
@@ -111,8 +113,7 @@ header a {
 
 .difficulty:hover {
     cursor: pointer;
-    background-color: rgba(94, 10, 133, 0.5);
-    box-shadow: 0 4px 0 rgba(94, 10, 133, 0.2);
+    background-color: var(--light-question)
 }
 
 .difficulty:active {
@@ -131,7 +132,7 @@ header a {
 
 .answer-box:hover {
     cursor: pointer;
-    background-color: rgba(201, 123, 132, 0.7);
+    background-color: var(--answer-hover);
     ;
 }
 
