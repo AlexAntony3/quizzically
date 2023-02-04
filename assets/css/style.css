@@ -162,6 +162,10 @@ header a {
     color: var(--text-color);
 }
 
+.btn a i:hover {
+    color: var(--background-color);
+}
+
 /* correct and incorrect answers */
 
 .correct {
