@@ -78,7 +78,7 @@ header a {
     margin: auto;
 }
 
-.container > * {
+.container>* {
     grid-column: 2;
     text-align: center;
     align-items: center;
@@ -152,14 +152,14 @@ header a {
 
 .btn a {
     margin: 0 2rem;
+    font-size: 4rem;
 }
 
 .btn a i {
-    font-size: 3rem;
     text-decoration: none;
     background-color: var(--question);
-    padding: 1rem;
     color: var(--text-color);
+    padding: 1rem;
 }
 
 .btn a i:hover {
@@ -180,4 +180,16 @@ header a {
 
 .hidden {
     display: none;
+}
+
+/* summary */
+
+#feedback {
+    font-size: 4rem;
+}
+
+#results {
+    font-size: 3rem;
+    text-align: center;
+    text-justify: inter-word;
 }

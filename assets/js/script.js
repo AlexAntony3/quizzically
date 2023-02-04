@@ -115,13 +115,13 @@ const displayGame = () => {
 const displaySummary = () => {
     gameScreenRef.classList.add("hidden");
     if (score < 4) {
-        feedback.innerHTML = "Congratulations! you completed the quiz, but you need to brush up on your general knowledge";
+        feedback.innerHTML = "You completed the quiz, but you need to brush up on your general knowledge";
     } else if (score < 7) {
-        feedback.innerHTML = "Congratulations! you completed the quiz, you did amazing! but you can always do better";
+        feedback.innerHTML = "You completed the quiz, you did amazing! but you can always do better";
     } else {
-        feedback.innerHTML = "Congratulations! you completed the quiz, you'll be number 1 in your local pub quiz!"
+        feedback.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
     };
-    resultsRef.innerHTML = `WOW! you got ${score} correct answers out of a possible ${maxQuestions} questions!`;
+    resultsRef.innerHTML = `WOW! you scored ${score} out of a possible ${maxQuestions} questions! <br> follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     summaryScreenRef.classList.remove("hidden");
 }
 
