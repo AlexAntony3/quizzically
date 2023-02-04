@@ -20,7 +20,6 @@ let userAnswer = false;
 let score = 0;
 let questionNumber = 0;
 let availableQuestions = [];
-let questions = [];
 
 /**
  * Register what difficulty of questions is selected by the user. 
