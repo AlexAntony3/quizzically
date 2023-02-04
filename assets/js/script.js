@@ -1,3 +1,4 @@
+//Query selectors
 const optionsRef = Array.from(document.querySelectorAll(".option"));
 const difficultyLevel = Array.from(document.querySelectorAll(".difficulty"));
 const questionRef = document.querySelector("#question");
@@ -10,8 +11,10 @@ const scoreTrackerRef = document.querySelector("#score-tracker")
 const feedbackRef = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
+
 const maxQuestions = 10;
 
+//Pre=requisites
 let currentQuestion = [];
 let userAnswer = false;
 let score = 0;
@@ -106,6 +109,11 @@ const genNewQuestion = () => {
     }
 };
 
+/**
+ * function to check if option selected is correct or incorrect and therefore adds classes required to
+ * turn answer box to green if correct and red if incorrect.
+ * after each selection a delay is set and genNewQuestion function is called.
+ */
 const checkAnswer = () => {
     optionsRef.forEach(option => {
         option.addEventListener("click", e => {
@@ -116,6 +124,7 @@ const checkAnswer = () => {
             const selectedAnswer = selectedOption.textContent;
 
             if (selectedAnswer == currentQuestion.correctAnswer) {
+                //score is increased due to correct answer being selected and value is displayed in the HUD of game.
                 score++
                 scoreTrackerRef.innerHTML = `score: <br> ${score}`;
                 selectedOption.parentElement.classList.add("correct");
@@ -134,11 +143,15 @@ const checkAnswer = () => {
     });
 };
 
+//function to display game screen and hide the home screen.
 const displayGame = () => {
     homeScreenRef.classList.add("hidden");
     gameScreenRef.classList.remove("hidden");
 }
-
+/**
+ * function to display summary screen and hide game screen.
+ * Feedback from quiz added according to score obtained. 
+ */
 const displaySummary = () => {
     gameScreenRef.classList.add("hidden");
     if (score < 4) {
@@ -152,5 +165,5 @@ const displaySummary = () => {
     summaryScreenRef.classList.remove("hidden");
 }
 
-
+//calling functions difficultyRef and checkAnswer once HTML document has parced. 
 window.addEventListener('DOMContentLoaded', (e) => difficultyRef(), checkAnswer());
