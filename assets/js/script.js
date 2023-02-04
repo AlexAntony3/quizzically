@@ -45,10 +45,11 @@ const convertedQuestions = listOfQuestions => {
         return {
             question: singleQuestion.question,
             correctAnswer: singleQuestion.correct_answer,
-            answers: [...singleQuestion.incorrect_answers, singleQuestion.correct_answer]
+            answers: [...singleQuestion.incorrect_answers, singleQuestion.correct_answer].sort(() => Math.random() - 0.5)
         };
     });
 };
+
 
 const startQuiz = (questions) => {
     questionNumber = 0;
@@ -116,7 +117,7 @@ const displayGame = () => {
 
 const displaySummary = () => {
     gameScreenRef.classList.add("hidden");
-    if (score < 4 ) {
+    if (score < 4) {
         feedback.innerHTML = "Congratulations! you completed the quiz, but you need to brush up on your general knowledge";
     } else if (score < 7) {
         feedback.innerHTML = "Congratulations! you completed the quiz, you did amazing! but you can always do better";
