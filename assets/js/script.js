@@ -1,8 +1,6 @@
-const questionRef = document.querySelector("#question");
 const optionsRef = Array.from(document.querySelectorAll(".option"));
-const easyQ = document.querySelector("#easy")
-const mediumQ = document.querySelector("#medium")
-const hardQ = document.querySelector("#hard")
+const difficultyLevel = Array.from(document.querySelectorAll(".difficulty"));
+const questionRef = document.querySelector("#question");
 const homeScreenRef = document.querySelector("#home");
 const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
@@ -12,7 +10,6 @@ const scoreTracker = document.querySelector("#score-tracker")
 const feedback = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
-const difficultyLevel = [easyQ, mediumQ, hardQ];
 const maxQuestions = 10;
 
 let currentQuestion = [];
