@@ -33,7 +33,12 @@ const difficultyRef = () => {
     });
 };
 
-
+/**
+ * Fetching data from api according to difficulty.
+ * Json file is converted to format required for the game.
+ * Data is then transferred to the start quiz function. 
+ * @param {string} difficulty value is determined by button clicked.
+ */
 const fetchData = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
         .then(response => response.json())
