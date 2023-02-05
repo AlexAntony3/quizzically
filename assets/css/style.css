@@ -75,10 +75,6 @@ header a {
     padding: 1rem;
 }
 
-.container h2 {
-    margin: auto;
-}
-
 .container>* {
     text-align: center;
     align-items: center;
@@ -184,21 +180,19 @@ header a {
 /* summary */
 
 #congrats {
-    font-size: 8rem;
+    font-size: 3rem;
 }
 
 #feedback {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 #trophy {
-    font-size: 14rem;
+    font-size: 5rem;
 }
 
 #results {
-    font-size: 3rem;
-    text-align: center;
-    text-justify: inter-word;
+    font-size: 2.5rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -212,5 +206,22 @@ header a {
         grid-column: 2;
     }
 
+    #congrats {
+        font-size: 8rem;
+    }
+    
+    #feedback {
+        font-size: 3rem;
+    }
+    
+    #trophy {
+        font-size: 14rem;
+    }
+    
+    #results {
+        font-size: 3rem;
+        text-align: center;
+        text-justify: inter-word;
+    }
 
 }
