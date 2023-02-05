@@ -151,7 +151,7 @@ header a {
 
 .btn a {
     margin: 0 2rem;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .btn a i {
@@ -184,19 +184,47 @@ header a {
 /* summary */
 
 #congrats {
-    font-size: 8rem;
+    font-size: 2rem;
 }
 
 #feedback {
-    font-size: 3rem;
+    font-size: 1rem;
 }
 
 #trophy {
-    font-size: 14rem;
+    font-size: 5rem;
 }
 
 #results {
-    font-size: 3rem;
+    font-size: 1rem;
     text-align: center;
     text-justify: inter-word;
+}
+
+/* media queries */
+
+@media screen and (min-width: 1000px) {
+    .btn a {
+        margin: 0 2rem;
+        font-size: 4rem;
+    }
+
+    #congrats {
+        font-size: 8rem;
+    }
+    
+
+    #feedback {
+        font-size: 3rem;
+    }
+    
+    #trophy {
+        font-size: 14rem;
+    }
+    
+    #results {
+        font-size: 3rem;
+        text-align: center;
+        text-justify: inter-word;
+    }
 }
