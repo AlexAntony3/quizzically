@@ -10,11 +10,13 @@
 </head>
 
 <body>
+    <!-- logo -->
     <header>
         <a href="index.html" aria-label="Link to the home page">
             <h1>Quizzically!</h1>
         </a>
     </header>
+    <!-- Home screen -->
     <section id="home">
         <div class="container">
             <h2>Select your difficulty:</h2>
@@ -27,8 +29,10 @@
             </h3>
         </div>
     </section>
+    <!-- Quiz screen -->
     <section id="game" class="hidden">
         <div class="container">
+            <!-- tracking elements relative to quiz gameplay and selection -->
             <div class="HUD">
                 <p id="question-tracker">x</p>
                 <p id="question-difficulty">y</p>
@@ -48,6 +52,7 @@
             <div class="answer-box">
                 <p class="option" data-answer="3">This is answer 4</p>
             </div>
+            <!-- returning and end game buttons -->
             <div class="btn">
                 <a href="index.html" aria-label="link to the home page"><i class="fa-solid fa-house"></i></a>
                 <a href="#summary" aria-label="link to the end the game and go to the summary page"><i
@@ -55,13 +60,16 @@
             </div>
         </div>
     </section>
+    <!-- Summary screen -->
     <section id="summary" class="hidden">
         <div class="container">
+            <!-- personalised feedback according to score attained -->
             <p id="congrats">Congratulations!</p>
             <p id="feedback">feedback</p>
             <span id="trophy"><i class="fa-solid fa-trophy"></i></span>
             <p id="results">Correct answers: </p>
             <div class="btn">
+                <!-- social media and home icons -->
                 <a href="www.facebook.com" aria-label="link to the qiuz's facebook page"><i class="fa-brands fa-facebook"></i></a>
                 <a href="www.instagram.com" aria-label="link to the qiuz's instagram page"><i class="fa-brands fa-instagram"></i></a>
                 <a href="www.twitter.com" aria-label="link to the qiuz's twitter page"><i class="fa-brands fa-twitter"></i></a>
