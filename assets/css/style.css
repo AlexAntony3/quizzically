@@ -211,7 +211,7 @@ header a {
     .container>* {
         grid-column: 2;
     }
-
+/* resize of the summary screen references to be more optimal for large screen viewing */
     #congrats {
         font-size: 8rem;
     }
@@ -229,7 +229,7 @@ header a {
         text-align: center;
         text-justify: inter-word;
     }
-
+/* resize of the button items to be more optimal for large screen viewing */
     .btn a {
         margin: 0 1rem;
         font-size: 4rem;
