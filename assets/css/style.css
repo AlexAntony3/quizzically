@@ -200,7 +200,7 @@ header a {
 #results {
     font-size: 2.5rem;
 }
-
+/* media query for 1000px to make optimal use of large screens */
 @media screen and (min-width: 1000px) {
 
     .container {
@@ -211,7 +211,7 @@ header a {
     .container>* {
         grid-column: 2;
     }
-/* resize of the summary screen references to be more optimal for large screen viewing */
+/* summary screen */
     #congrats {
         font-size: 8rem;
     }
@@ -229,7 +229,7 @@ header a {
         text-align: center;
         text-justify: inter-word;
     }
-/* resize of the button items to be more optimal for large screen viewing */
+/* buttons */
     .btn a {
         margin: 0 1rem;
         font-size: 4rem;
