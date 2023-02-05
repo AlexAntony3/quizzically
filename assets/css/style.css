@@ -71,7 +71,8 @@ header a {
     width: 100%;
     height: calc(100vh - 8rem);
     display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-columns: 1fr;
+    padding: 1rem;
 }
 
 .container h2 {
@@ -79,7 +80,6 @@ header a {
 }
 
 .container>* {
-    grid-column: 2;
     text-align: center;
     align-items: center;
     margin-top: 2rem;
@@ -199,4 +199,18 @@ header a {
     font-size: 3rem;
     text-align: center;
     text-justify: inter-word;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+    
+    .container>* {
+        grid-column: 2;
+    }
+
+
 }
