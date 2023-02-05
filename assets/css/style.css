@@ -124,7 +124,6 @@ header a {
 .answer-box {
     background-color: var(--answer);
     margin-inline: auto;
-    padding: 1rem;
     border-radius: 2rem;
     width: 100%;
     text-align: center;
@@ -137,7 +136,7 @@ header a {
 }
 
 .answer-box:active {
-    transform: scale(0.97);
+    transform: scale(1.02);
 }
 
 .answer-box p {
