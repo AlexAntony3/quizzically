@@ -144,10 +144,13 @@ header a {
 
 
 /*reset and home buttons*/
+.btn {
+    padding: 1rem;
+}
 
 .btn a {
-    margin: 0 2rem;
-    font-size: 4rem;
+    margin: 0 1rem;
+    font-size: 2rem;
 }
 
 .btn a i {
@@ -155,6 +158,7 @@ header a {
     background-color: var(--question);
     color: var(--text-color);
     padding: 1rem;
+    border-radius: 20%;
 }
 
 .btn a i:hover {
@@ -222,6 +226,11 @@ header a {
         font-size: 3rem;
         text-align: center;
         text-justify: inter-word;
+    }
+
+    .btn a {
+        margin: 0 1rem;
+        font-size: 4rem;
     }
 
 }
