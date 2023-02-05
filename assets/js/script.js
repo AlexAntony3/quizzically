@@ -160,7 +160,7 @@ const displaySummary = () => {
     } else {
         feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
     };
-    resultsRef.innerHTML = `WOW! you scored ${score} out of a possible ${maxQuestions} questions! <br> follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
+    resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     summaryScreenRef.classList.remove("hidden");
 }
 
