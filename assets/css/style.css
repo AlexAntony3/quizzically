@@ -183,8 +183,16 @@ header a {
 
 /* summary */
 
+#congrats {
+    font-size: 8rem;
+}
+
 #feedback {
-    font-size: 4rem;
+    font-size: 3rem;
+}
+
+#trophy {
+    font-size: 14rem;
 }
 
 #results {
