@@ -21,10 +21,10 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 * As a user, I want to be able to retry a quiz and not having repeating questions. 
 
 ### Site Owner's Goals
-* As the site owner, I want to be able to provide challenge user's with the questions. 
-* As the site owner, I want to entice the user to visit and stay on the page.
-* As the site owner, I want to provide a playful and enjoyable experience for the user. 
-* As the site owner, I want to offer the user an interactive way to select the answer. 
+* I want to be able to provide challenge user's with the questions. 
+* I want to entice the user to visit and stay on the page.
+* I want to provide a playful and enjoyable experience for the user. 
+* I want to offer the user an interactive way to select the answer. 
 
 ### Expectation
 * I expect visibility of a tally of correct and incorrect answers. 
