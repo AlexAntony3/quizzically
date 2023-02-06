@@ -94,7 +94,35 @@ Three wireframes shown below are examples of what the content of the page will l
 * [Google Fonts](https://fonts.google.com/ "Google Fonts")
 ---
 ## Testing
----
+| Testing |Outcome  |
+|--|--|
+| Initiating game by clicking **Easy** button | Easy quiz game started. |
+| Initiating game by clicking **Medium** button | Medium quiz game started. | 
+| Initiating game by clicking **Hard** button | Hard quiz game started. |
+| Hover over all **difficulty** buttons | Hover colour change observed |
+| In developer mode, **change screen sizes** while in **home page** | Home page is responsive and legible |
+| Clicking **home** button on all **questions** in each difficulty | Home page loaded. |
+| Clicking **Quizzically! logo** on every **question** in each difficulty | Home page loaded. |
+| Clicking **end game** button on all **questions** in each difficulty. | Summary screen displayed |
+| Hovering **over home** and **end game** buttons | White coloured hover observed |
+| Upon progressing through the quiz, check the **HUD** response | HUD in all difficulties were responsive. |
+| Hover over all **answer boxes** | Hover colour change observed |
+| Click any **incorrect** answer in each question across all difficulties | Answer box colour changed to red. |
+| Click any **correct** answer in each question across all difficulties | Answer box colour changed to green. |
+| Click answers **multiple times** prior to new question being loaded | No response |
+| In developer mode, **change screen sizes** while in **game screen** for all questions and difficulties | Game screen is responsive and legible |
+| Complete **all questions** in the quiz | Summary screen is loaded |
+| Score from a range of **0 to 10** in the game | Summary screen score is the number of questions answered correctly. |
+| Complete the quiz and obtain a result of **< 3** | Feedback of quiz is appropriate |
+| Complete the quiz and obtain a result of **< 7** | Feedback of quiz is appropriate |
+| Complete the quiz and obtain a result of **> 7** | Feedback of quiz is appropriate |
+| Hover over all social media icons | White hover colour observed |
+| Click each social media icon | New tab opened with the correct website |
+| Clicking **home** button on the **summary** screen | Home page loaded. |
+| Clicking **Quizzically! logo** on the **summary** screen | Home page loaded. |
+| In developer mode, **change screen sizes** while in **summary screen** | Summary screen is responsive and legible |
+| Click **any** button in the quiz | animation of size transform observed |
+| **Hover** over all buttons in the quiz | Mouse tranformed to a pointer |
 ## Deployments
 Post completion of coding, the project was added, committed and pushed to github. The github repository was made live completing the following steps:
 
