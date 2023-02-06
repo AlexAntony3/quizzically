@@ -83,15 +83,16 @@ Three wireframes shown below are examples of what the content of the page will l
 * HTML
 * CSS
 * JavaScript
+### Libraries
+* [Fontawesome](https://fontawesome.com/ "Font Awesome")
+* [Google Fonts](https://fonts.google.com/ "Google Fonts")
 ### Tools
 * [Coolers](https://coolors.co/ "Coolors")
 * [Mockplus RP](https://www.mockplus.com/mockplus-rp "Mockplus RP")
 * [Git](https://git-scm.com/ "Git")
 * [GitHub](https://github.com/ "GitHub")
 * [GitPod](https://www.gitpod.io/ "GitPod")
-### Libraries
-* [Fontawesome](https://fontawesome.com/ "Font Awesome")
-* [Google Fonts](https://fonts.google.com/ "Google Fonts")
+
 ---
 ## Testing
 | Testing |Outcome  |
