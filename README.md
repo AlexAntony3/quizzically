@@ -52,15 +52,19 @@ There will two types of icons used for this webpage:
 [Google Fonts](https://fonts.google.com/ "Google Fonts") was used to identify which font would best suit a quiz show. I decided to use the 'Rubik' font as it's clear, modern and simplistic. This font will be used for all headers. The next font used in the website will be 'Open Sans'. This font is popular among most websites and will be used for the presentation of questions and answers. A variety of strengths will and font sizes will be used throughout depending on the situation. 
 
 ### Colour Scheme
-The below colour scheme was generated using [Coolor](https://coolors.co/ "Coolers"). Strong colours are used in this quiz as a clear distinction is required for the questions and answers. Complimentary colours are then used to tone out the colours so that they aren't too bold. 
-![Colour Scheme](docs/screenshots/color.png "Colour Pallet")
+The below colour scheme was generated using [Coolor](https://coolors.co/ "Coolers"). Mild and calming colours are used in this quiz as it provides a welcoming feel for the user. Furthermore Complimentary colours are used throughout to marry all the colours together. 
+![Colour Scheme](docs/screenshots/ColourScheme.png "Colour Scheme")
 
 | Colour  | Description |
 | ------  | --- |
-| #1F271B | This colour will be used for the header bar and submit buttons. |
-| #5F0A87 | This colour will be used for the question box. |
-| #E2E2E2 | This colour will be used for the text in all sections. |
-| #C97B84| This colour will be used for the answer box. |
+| #463F3A | This colour will be used for the header bar |
+| #8A817C | This colour will be used for the all buttons |
+| #040303 | This colour will be used for the text within the quiz. |
+| #E0AFA0 | This colour will be used for the answer box. |
+| #F4F3EE | This colour will be used for the background and as contrasting text. |
+| #256125 | This colour will be used to indicate that the user has answered the question correctly. |
+| #d31717 | This colour will be used to indicate that the user has answered the quesiton incorrectly. |
+
 
 ### Breakpoints
 No particular breakpoints will be used in the media queries however, the website is responsive to a minimum of 320px. 
