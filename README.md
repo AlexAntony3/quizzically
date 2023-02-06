@@ -77,6 +77,9 @@ Three wireframes shown below are examples of what the content of the page will l
 ## Features
 
 ## Potential Future Additions
+* With more resource and time, I would like to add a feature whereby when the incorrect answer is selected, the correct answer is also shown.
+* With more resource and time, I would like to add more category specific questions to the quiz.
+* With more resource and time, I would like to add an interface whereby scores can be stored and shared with others
 ---
 ## Technologies used
 ### Languages
