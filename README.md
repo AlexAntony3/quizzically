@@ -80,6 +80,12 @@ Three wireframes shown below are examples of what the content of the page will l
 ---
 ## Features
 
+## Bug Fixes
+| Bug detected | Action |
+|--|--|
+| When testing using a mobile device, the hover colour of answers clicked remained active | Hover effects and properties were added to media query. |
+| Outer parts of the box when clicked doesn't register as a click to the answer | Upon investigation it was discovered that it was due to the transform effect added, this was changed to make it still feel like a button is being clicked but make sure even if the outer most elements are chosen, the click is still registered.  |
+
 ## Potential Future Additions
 * With more resource and time, I would like to add a feature whereby when the incorrect answer is selected, the correct answer is also shown.
 * With more resource and time, I would like to add more category specific questions to the quiz.
