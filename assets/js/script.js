@@ -56,7 +56,7 @@ const fetchData = (difficulty) => {
  * @returns The correct answer in the fetched data.
  * @returns A randomly assorted array combining the correct and incorrect answers.
  */
-const convertedQuestions = listOfQuestions => {
+const convertedQuestions = (listOfQuestions) => {
     return listOfQuestions.map(singleQuestion => {
         return {
             question: singleQuestion.question,
@@ -100,8 +100,7 @@ const genNewQuestion = () => {
 
         optionsRef.forEach((option) => {
             const optionNum = option.dataset['answer'];
-            const optionTxt = currentQuestion.answers[optionNum]
-            option.innerHTML = optionTxt
+            option.innerHTML = currentQuestion.answers[optionNum];
         })
         //completed question is removed from available questions index and user is allowed to answer question.
         availableQuestions.splice(index, 1);
@@ -123,7 +122,7 @@ const checkAnswer = () => {
             const selectedOption = e.target;
             const selectedAnswer = selectedOption.textContent;
 
-            if (selectedAnswer == currentQuestion.correctAnswer) {
+            if (selectedAnswer === currentQuestion.correctAnswer) {
                 //score is increased due to correct answer being selected and value is displayed in the HUD of game.
                 score++
                 scoreTrackerRef.innerHTML = `score: <br> ${score}`;
@@ -165,7 +164,7 @@ const displaySummary = () => {
     } else {
         feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
     };
-    resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
+    resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     summaryScreenRef.classList.remove("hidden");
 }
 
@@ -173,4 +172,4 @@ const displaySummary = () => {
 window.addEventListener('DOMContentLoaded', (e) => {
     difficultyRef();
     checkAnswer();
-})
+});
