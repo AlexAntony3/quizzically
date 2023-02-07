@@ -49,7 +49,7 @@ There will two types of icons used for this webpage:
 * [FontAwesome](https://fontawesome.com/ "Font Awesome") will be used for the three categories of difficulty. Furthermore, universal icons will be used meaning the overall user experience will be improved. 
 
 ### Font
-[Google Fonts](https://fonts.google.com/ "Google Fonts") was used to identify which font would best suit a quiz show. I decided to use the 'Rubik' font as it's clear, modern and simplistic. This font will be used for all headers. The next font used in the website will be 'Open Sans'. This font is popular among most websites and will be used for the presentation of questions and answers. A variety of strengths will and font sizes will be used throughout depending on the situation. 
+[Google Fonts](https://fonts.google.com/ "Google Fonts") was used to identify which font would best suit a quiz show. I decided to use the **Rubik** font as it's clear, modern and simplistic. This font will be used for all elements. This font is popular among most websites and will be used for the presentation of questions and answers.
 
 ### Colour Scheme
 The below colour scheme was generated using [Coolor](https://coolors.co/ "Coolers"). Mild and calming colours are used in this quiz as it provides a welcoming feel for the user. Furthermore Complimentary colours are used throughout to marry all the colours together. 
