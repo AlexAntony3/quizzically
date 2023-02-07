@@ -167,6 +167,10 @@ header a {
     color: var(--background-color);
 }
 
+.btn a i:active {
+    transform: scale(1.02);
+}
+
 /* correct and incorrect answers */
 
 .correct {
