@@ -8,6 +8,7 @@ const summaryScreenRef = document.querySelector("#summary");
 const questionTrackerRef = document.querySelector("#question-tracker")
 const questionDifficultyRef = document.querySelector("#question-difficulty")
 const scoreTrackerRef = document.querySelector("#score-tracker")
+const endGameBtn = document.querySelector("end-game-btn")
 const feedbackRef = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
@@ -142,11 +143,15 @@ const checkAnswer = () => {
     });
 };
 
-//function to display game screen and hide the home screen.
+/**
+ *  function to display game screen and hide the home screen.
+ */ 
 const displayGame = () => {
     homeScreenRef.classList.add("hidden");
     gameScreenRef.classList.remove("hidden");
 }
+
+
 /**
  * function to display summary screen and hide game screen.
  * Feedback from quiz added according to score obtained. 
@@ -165,4 +170,7 @@ const displaySummary = () => {
 }
 
 //calling functions difficultyRef and checkAnswer once HTML document has parced. 
-window.addEventListener('DOMContentLoaded', (e) => difficultyRef(), checkAnswer());
+window.addEventListener('DOMContentLoaded', (e) => {
+    difficultyRef();
+    checkAnswer();
+})
