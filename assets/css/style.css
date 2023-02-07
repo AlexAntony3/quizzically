@@ -127,11 +127,7 @@ header a {
     text-align: center;
 }
 
-.answer-box:hover {
-    cursor: pointer;
-    background-color: var(--answer-hover);
-    ;
-}
+
 
 .answer-box:active {
     transform: scale(1.02);
@@ -161,14 +157,6 @@ header a {
     color: var(--text-color);
     padding: 1rem;
     border-radius: 20%;
-}
-
-.btn a i:hover {
-    color: var(--background-color);
-}
-
-.btn a i:active {
-    transform: scale(1.02);
 }
 
 /* correct and incorrect answers */
@@ -215,6 +203,14 @@ header a {
     .container>* {
         grid-column: 2;
     }
+
+/* answer box */
+
+.answer-box:hover {
+    cursor: pointer;
+    background-color: var(--answer-hover);
+}    
+
 /* summary screen */
     #congrats {
         font-size: 8rem;
@@ -237,6 +233,14 @@ header a {
     .btn a {
         margin: 0 1rem;
         font-size: 4rem;
+    }
+
+    .btn a i:hover {
+        color: var(--background-color);
+    }
+    
+    .btn a i:active {
+        transform: scale(1.02);
     }
 
 }
