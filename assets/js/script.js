@@ -1,5 +1,5 @@
 const optionsRef = Array.from(document.querySelectorAll(".option"));
-const difficultyLevel = Array.from(document.querySelectorAll(".difficulty"));
+const difficultyLevelRef = Array.from(document.querySelectorAll(".difficulty"));
 const questionRef = document.querySelector("#question");
 const homeScreenRef = document.querySelector("#home");
 const gameScreenRef = document.querySelector("#game");
@@ -11,10 +11,9 @@ const endGameBtn = document.querySelector("#end-game-btn");
 const feedbackRef = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
-
 const maxQuestions = 10;
 let currentQuestion = [];
-let userAnswer = false;
+let isUserReady = false;
 let score = 0;
 let questionNumber = 0;
 let availableQuestions = [];
@@ -23,8 +22,8 @@ let availableQuestions = [];
  * Register what difficulty of questions is selected by the user. 
  * The difficulty values are fetched and displayed in the game page.
  */
-const difficultyRef = () => {
-    difficultyLevel.forEach(level => {
+const difficultySelector = () => {
+    difficultyLevelRef.forEach(level => {
         level.addEventListener("click", e => {
             e.preventDefault();
             fetchData(e.target.value);
@@ -41,8 +40,8 @@ const fetchData = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
         .then(response => response.json())
         .then(data => convertedQuestions(data.results))
-        .then((newData) => startQuiz(newData))
-        .catch((error) => console.log(error));
+        .then(questions => startQuiz(questions))
+        .catch(error => console.log(error));
 };
 
 /**
@@ -73,9 +72,7 @@ const startQuiz = (questions) => {
 };
 
 /**
- * Function to generate new question.
- * If a total of 10 questions have been answered, then the summary sceen function is called.
- * randomised answers for the relative question is inputted into each data set. 
+ * Function to generate new question with shuffled answer options 
  */
 const genNewQuestion = () => {
     if (questionNumber == maxQuestions) {
@@ -88,26 +85,25 @@ const genNewQuestion = () => {
         currentQuestion = availableQuestions[index];
         questionRef.innerHTML = currentQuestion.question;
 
-        optionsRef.forEach((option) => {
+        optionsRef.forEach(option => {
             const optionNum = option.dataset['answer'];
             option.innerHTML = currentQuestion.answers[optionNum];
         });
         
         availableQuestions.splice(index, 1);
-        userAnswer = true;
+        isUserReady = true;
     }
 };
 
 /**
- * function to check if option selected is correct or incorrect and therefore adds classes required to
- * turn answer box to green if correct and red if incorrect.
+ * Function to check if option selected is correct or not.
  */
 const checkAnswer = () => {
     optionsRef.forEach(option => {
         option.addEventListener("click", e => {
-            if (!userAnswer) return;
+            if (!isUserReady) return;
 
-            userAnswer = false;
+            isUserReady = false;
             const selectedOption = e.target;
             const selectedAnswer = selectedOption.textContent;
 
@@ -129,7 +125,6 @@ const checkAnswer = () => {
                     selectedOption.parentElement.classList.remove("incorrect");
                     genNewQuestion();
                 }, 1300);
-
             }
         });
     });
@@ -160,11 +155,12 @@ const displaySummary = () => {
         feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!";
         resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     }
-
 };
 
-//calling functions difficultyRef and checkAnswer once HTML document has parced. 
-window.addEventListener('DOMContentLoaded', (e) => {
-    difficultyRef();
+/**
+ * Calling functions once HTML document has parsed. 
+ */ 
+window.addEventListener('DOMContentLoaded', e => {
+    difficultySelector();
     checkAnswer();
 });
