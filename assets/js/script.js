@@ -86,7 +86,7 @@ const genNewQuestion = () => {
         questionRef.innerHTML = currentQuestion.question;
 
         optionsRef.forEach(option => {
-            const optionNum = option.dataset['answer'];
+            const optionNum = option.dataset.answer;
             option.innerHTML = currentQuestion.answers[optionNum];
         });
         
