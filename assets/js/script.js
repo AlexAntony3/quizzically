@@ -8,7 +8,7 @@ const summaryScreenRef = document.querySelector("#summary");
 const questionTrackerRef = document.querySelector("#question-tracker")
 const questionDifficultyRef = document.querySelector("#question-difficulty")
 const scoreTrackerRef = document.querySelector("#score-tracker")
-const endGameBtn = document.querySelector("end-game-btn")
+const endGameBtn = document.querySelector("#end-game-btn")
 const feedbackRef = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
@@ -78,6 +78,7 @@ const startQuiz = (questions) => {
     availableQuestions = [...questions];
     displayGame();
     genNewQuestion();
+    endGameBtn.addEventListener('click', () => displaySummary())
 };
 
 /**
@@ -151,11 +152,13 @@ const displayGame = () => {
 }
 
 
+
 /**
  * function to display summary screen and hide game screen.
  * Feedback from quiz added according to score obtained. 
  */
 const displaySummary = () => {
+    summaryScreenRef.classList.remove("hidden");
     gameScreenRef.classList.add("hidden");
     if (score < 4) {
         feedbackRef.innerHTML = "You completed the quiz, but you need to brush up on your general knowledge";
@@ -165,7 +168,7 @@ const displaySummary = () => {
         feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
     };
     resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
-    summaryScreenRef.classList.remove("hidden");
+    
 }
 
 //calling functions difficultyRef and checkAnswer once HTML document has parced. 
