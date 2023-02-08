@@ -109,7 +109,7 @@ Three wireframes shown below are examples of what the content of the page will l
 ---
 ## Testing
 | Testing |Outcome | Pass or Fail |
-|--|--|
+|--|--|--|
 | Initiating game by clicking **Easy** button | Easy quiz game started. | Pass |
 | Initiating game by clicking **Medium** button | Medium quiz game started. | Pass |
 | Initiating game by clicking **Hard** button | Hard quiz game started. | Pass |
