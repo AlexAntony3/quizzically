@@ -1,7 +1,7 @@
 # Quizzically
 ## Introduction
 
-Welcome to Quizzically, a general knowledge quiz with three degrees of difficulty: easy, medium and hard. This quiz is suitable for anyone above the age of 5, and is an interactive website that allows the user to select the correct answer out of 4 multiple choices. 
+Welcome to Quizzically, a general knowledge quiz with three degrees of difficulty: **easy, medium and hard**. This quiz is suitable for anyone above the age of 5, and is an interactive website that allows the user to select the correct answer out of **4 multiple choices**. 
 
 ---
 ## UX (user experience)
@@ -67,11 +67,11 @@ The below colour scheme was generated using [Coolor](https://coolors.co/ "Cooler
 
 
 ### Breakpoints
-No particular breakpoints will be used in the media queries however, the website is responsive to a minimum of 320px. 
+No particular breakpoints will be used in the media queries however, the website is responsive to a minimum of **320px**. 
 
 
 ### Wireframes
-Three wireframes shown below are examples of what the content of the page will look like when displayed on large and small screens. The page will be designed in order to be responsive to all sizes and therefore the large screen and medium screen will exhibit the same presentation with proportional scale. Both wireframes were created using [Mockplus RP](https://www.mockplus.com/mockplus-rp "Mockplus RP").
+Three wireframes shown below are examples of what the content of the page will look like when displayed on **large** and **small** screens. The page will be designed in order to be responsive to all sizes and therefore the large screen and medium screen will exhibit the same presentation with proportional scale. Both wireframes were created using [Mockplus RP](https://www.mockplus.com/mockplus-rp "Mockplus RP").
 
 [Large/Medium Screen](docs/wireframes/large-screen.jpg "Large/Medium Screen")
 
@@ -115,7 +115,7 @@ The following image is a screenshot of the summary screen in mobile view.
 | Difficulty buttons not appearing in the **Rubik** font | Font family was additionally added to the difficulty button css. |
 
 ## Unfixable bug
-* When testing the quiz, it was noted that the action of clicking answers were not being registered. This bug occurred twice and was not observed again. The script.js file was reviewed multiple times and the root cause of this bug could not be identified. 
+* When testing the quiz, it was noted that the action of clicking answers were not being registered. This bug occurred **twice** and was not observed again. The script.js file was reviewed multiple times and the root cause of this bug could not be identified. 
 
 ## Potential Future Additions
 * With more resource and time, I would like to add a feature whereby when the incorrect answer is selected, the correct answer is also shown.
@@ -208,6 +208,7 @@ Post completion of coding, the project was added, committed and pushed to github
 * [James Q Quick](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&ab_channel=JamesQQuick) - used as guidance into how to build a quiz.
 * [Ania Kubów](https://www.youtube.com/watch?v=zgHim4ZDpZY&t=1908s&ab_channel=CodewithAniaKub%C3%B3w) - used as a guide to learn how to fetch API.
 * [Geek Probin](https://www.youtube.com/watch?v=-cX5jnQgqSM&t=418s&ab_channel=GeekProbin) - used as a guide to understand how to check if answers were correct.
+* Deployment section was the same as what was used in the NMFC project. 
 ---
 ## Inspirations
 * [JavaScript Quiz](https://javascriptquiz.com/)
