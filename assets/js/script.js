@@ -1,4 +1,3 @@
-//Query selectors
 const optionsRef = Array.from(document.querySelectorAll(".option"));
 const difficultyLevel = Array.from(document.querySelectorAll(".difficulty"));
 const questionRef = document.querySelector("#question");
@@ -14,8 +13,6 @@ const resultsRef = document.querySelector("#results");
 
 
 const maxQuestions = 10;
-
-//Pre=requisites
 let currentQuestion = [];
 let userAnswer = false;
 let score = 0;
@@ -38,9 +35,7 @@ const difficultyRef = () => {
 
 /**
  * Fetching data from api according to difficulty.
- * Json file is converted to format required for the game.
- * Data is then transferred to the start quiz function. 
- * @param {string} difficulty value is determined by button clicked.
+ * @param {string} difficulty value is determined by selected difficulty.
  */
 const fetchData = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=multiple`)
@@ -51,10 +46,7 @@ const fetchData = (difficulty) => {
 
 /**
  * Data is converted to required data from the fetched API.
- * @param {Array} listOfQuestions is mapped into an array containing required information. 
- * @returns The question stated in the fetched data.
- * @returns The correct answer in the fetched data.
- * @returns A randomly assorted array combining the correct and incorrect answers.
+ * @returns Questions, correct answer and shuffled total answers.
  */
 const convertedQuestions = (listOfQuestions) => {
     return listOfQuestions.map(singleQuestion => {
@@ -68,8 +60,6 @@ const convertedQuestions = (listOfQuestions) => {
 
 /**
  * pre-requisite parameters are set and questions array are spread into an available questions array.
- * displayGame function is called.
- * genNewQuestion function is called.
  * @param {Array} questions list of questions from the API. 
  */
 const startQuiz = (questions) => {
@@ -84,8 +74,6 @@ const startQuiz = (questions) => {
 /**
  * Function to generate new question.
  * If a total of 10 questions have been answered, then the summary sceen function is called.
- * Question number tracker increments according to number of questions answered.
- * Questions are randomised and displayed according to fetched data.
  * randomised answers for the relative question is inputted into each data set. 
  */
 const genNewQuestion = () => {
@@ -103,7 +91,7 @@ const genNewQuestion = () => {
             const optionNum = option.dataset['answer'];
             option.innerHTML = currentQuestion.answers[optionNum];
         })
-        //completed question is removed from available questions index and user is allowed to answer question.
+        
         availableQuestions.splice(index, 1);
         userAnswer = true;
     }
@@ -112,7 +100,6 @@ const genNewQuestion = () => {
 /**
  * function to check if option selected is correct or incorrect and therefore adds classes required to
  * turn answer box to green if correct and red if incorrect.
- * after each selection a delay is set and genNewQuestion function is called.
  */
 const checkAnswer = () => {
     optionsRef.forEach(option => {
@@ -124,20 +111,24 @@ const checkAnswer = () => {
             const selectedAnswer = selectedOption.textContent;
 
             if (selectedAnswer === currentQuestion.correctAnswer) {
-                //score is increased due to correct answer being selected and value is displayed in the HUD of game.
                 score++
                 scoreTrackerRef.innerHTML = `score: <br> ${score}`;
+
                 selectedOption.parentElement.classList.add("correct");
+
                 setTimeout(() => {
                     selectedOption.parentElement.classList.remove("correct");
                     genNewQuestion();
                 }, 1000);
+
             } else {
                 selectedOption.parentElement.classList.add("incorrect");
+
                 setTimeout(() => {
                     selectedOption.parentElement.classList.remove("incorrect");
                     genNewQuestion();
                 }, 1000);
+
             };
         });
     });
@@ -150,8 +141,6 @@ const displayGame = () => {
     homeScreenRef.classList.add("hidden");
     gameScreenRef.classList.remove("hidden");
 }
-
-
 
 /**
  * function to display summary screen and hide game screen.
