@@ -73,9 +73,9 @@ No particular breakpoints will be used in the media queries however, the website
 ### Wireframes
 Three wireframes shown below are examples of what the content of the page will look like when displayed on large and small screens. The page will be designed in order to be responsive to all sizes and therefore the large screen and medium screen will exhibit the same presentation with proportional scale. Both wireframes were created using [Mockplus RP](https://www.mockplus.com/mockplus-rp "Mockplus RP").
 
-[Large/Medium Screen](docs/screenshots/large-screen.jpg "Large/Medium Screen")
+[Large/Medium Screen](docs/wireframes/large-screen.jpg "Large/Medium Screen")
 
-[Small Screen](docs/screenshots/small-screen.jpg "Small Screen")
+[Small Screen](docs/wireframes/small-screen.jpg "Small Screen")
 
 ---
 ## Features
