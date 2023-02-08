@@ -149,10 +149,10 @@ header a {
 .btn a {
     margin: 0 1rem;
     font-size: 2rem;
+    text-decoration: none;
 }
 
 .btn a i {
-    text-decoration: none;
     background-color: var(--question);
     color: var(--text-color);
     padding: 1rem;
