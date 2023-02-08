@@ -145,7 +145,7 @@ const checkAnswer = () => {
 
 /**
  *  function to display game screen and hide the home screen.
- */ 
+ */
 const displayGame = () => {
     homeScreenRef.classList.add("hidden");
     gameScreenRef.classList.remove("hidden");
@@ -162,13 +162,16 @@ const displaySummary = () => {
     gameScreenRef.classList.add("hidden");
     if (score < 4) {
         feedbackRef.innerHTML = "You completed the quiz, but you need to brush up on your general knowledge";
+        resultsRef.innerHTML = `Ouch! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     } else if (score < 7) {
         feedbackRef.innerHTML = "You completed the quiz, you did amazing! but you can always do better";
+        resultsRef.innerHTML = `Not bad! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     } else {
         feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
+        resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     };
-    resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
-    
+
+
 }
 
 //calling functions difficultyRef and checkAnswer once HTML document has parced. 
