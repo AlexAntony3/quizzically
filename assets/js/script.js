@@ -4,10 +4,10 @@ const questionRef = document.querySelector("#question");
 const homeScreenRef = document.querySelector("#home");
 const gameScreenRef = document.querySelector("#game");
 const summaryScreenRef = document.querySelector("#summary");
-const questionTrackerRef = document.querySelector("#question-tracker")
-const questionDifficultyRef = document.querySelector("#question-difficulty")
-const scoreTrackerRef = document.querySelector("#score-tracker")
-const endGameBtn = document.querySelector("#end-game-btn")
+const questionTrackerRef = document.querySelector("#question-tracker");
+const questionDifficultyRef = document.querySelector("#question-difficulty");
+const scoreTrackerRef = document.querySelector("#score-tracker");
+const endGameBtn = document.querySelector("#end-game-btn");
 const feedbackRef = document.querySelector("#feedback");
 const resultsRef = document.querySelector("#results");
 
@@ -26,7 +26,7 @@ let availableQuestions = [];
 const difficultyRef = () => {
     difficultyLevel.forEach(level => {
         level.addEventListener("click", e => {
-            e.preventDefault()
+            e.preventDefault();
             fetchData(e.target.value);
             questionDifficultyRef.innerHTML = `Difficulty: <br> ${e.target.value}`;
         });
@@ -42,8 +42,8 @@ const fetchData = (difficulty) => {
         .then(response => response.json())
         .then(data => convertedQuestions(data.results))
         .then((newData) => startQuiz(newData))
-        .catch((error) => console.log(error))
-}
+        .catch((error) => console.log(error));
+};
 
 /**
  * Data is converted to required data from the fetched API.
@@ -69,7 +69,7 @@ const startQuiz = (questions) => {
     availableQuestions = [...questions];
     displayGame();
     genNewQuestion();
-    endGameBtn.addEventListener('click', () => displaySummary())
+    endGameBtn.addEventListener('click', () => displaySummary());
 };
 
 /**
@@ -91,7 +91,7 @@ const genNewQuestion = () => {
         optionsRef.forEach((option) => {
             const optionNum = option.dataset['answer'];
             option.innerHTML = currentQuestion.answers[optionNum];
-        })
+        });
         
         availableQuestions.splice(index, 1);
         userAnswer = true;
@@ -112,7 +112,7 @@ const checkAnswer = () => {
             const selectedAnswer = selectedOption.textContent;
 
             if (selectedAnswer === currentQuestion.correctAnswer) {
-                score++
+                score++;
                 scoreTrackerRef.innerHTML = `score: <br> ${score}`;
 
                 selectedOption.parentElement.classList.add("correct");
@@ -130,7 +130,7 @@ const checkAnswer = () => {
                     genNewQuestion();
                 }, 1000);
 
-            };
+            }
         });
     });
 };
@@ -141,7 +141,7 @@ const checkAnswer = () => {
 const displayGame = () => {
     homeScreenRef.classList.add("hidden");
     gameScreenRef.classList.remove("hidden");
-}
+};
 
 /**
  * function to display summary screen and hide game screen.
@@ -157,12 +157,11 @@ const displaySummary = () => {
         feedbackRef.innerHTML = "You completed the quiz, you did amazing! but you can always do better";
         resultsRef.innerHTML = `Not bad! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
     } else {
-        feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!"
+        feedbackRef.innerHTML = "You completed the quiz, you'll be number 1 in your local pub quiz!";
         resultsRef.innerHTML = `WOW! you scored <strong>${score}</strong> out of a possible ${maxQuestions} questions! <br> Follow our social media accounts for any news! or press the home button below to attempt the quiz again`;
-    };
+    }
 
-
-}
+};
 
 //calling functions difficultyRef and checkAnswer once HTML document has parced. 
 window.addEventListener('DOMContentLoaded', (e) => {
