@@ -137,6 +137,24 @@ Three wireframes shown below are examples of what the content of the page will l
 | In developer mode, **change screen sizes** while in **summary screen** | Summary screen is responsive and legible |
 | Click **any** button in the quiz | animation of size transform observed |
 | **Hover** over all buttons in the quiz | Mouse tranformed to a pointer |
+
+### W3C CSS validator
+
+[CSS validation testing](docs/screenshots/css-testing.png "CSS Validation testing")
+
+### W3C HTML validator
+
+[HTML validation testing](docs/screenshots/html-testing.jpg "HTML validation testing")
+
+### Jshint validation
+
+[JavaScript validation testing](docs/screenshots/js-testing.jpg "JavaScript validation testing")
+
+### Lighthouse testing
+
+[Desktop lighthouse testing](docs/screenshots/lighthouse-desktop.jpg "Desktop lighthouse testing")
+
+[Mobile lighthouse testing](docs/screenshots/lighthouse-mobile.jpg "Mobile lighthouse testing")
 ## Deployments
 Post completion of coding, the project was added, committed and pushed to github. The github repository was made live completing the following steps:
 
