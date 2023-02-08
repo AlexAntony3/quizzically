@@ -204,12 +204,11 @@ Post completion of coding, the project was added, committed and pushed to github
 * Any future changes can be completed by **adding**, **committing** and **pushing** updates to github.
 ---
 ## Credits
-* [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/) - Assistance throughout the project
-* [James Q Quick](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&ab_channel=JamesQQuick) - used as guidance into how to build a quiz.
-* [Ania Kubów](https://www.youtube.com/watch?v=zgHim4ZDpZY&t=1908s&ab_channel=CodewithAniaKub%C3%B3w) - used as a guide to learn how to fetch API.
-* [Geek Probin](https://www.youtube.com/watch?v=-cX5jnQgqSM&t=418s&ab_channel=GeekProbin) - used as a guide to understand how to check if answers were correct.
-* Deployment section was the same as what was used in the NMFC project. 
+* [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/ "Simen Daehlin") - Assistance throughout the project
+* [James Q Quick](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&ab_channel=JamesQQuick "James Q Quick") - used as guidance into how to build a quiz.
+* [Ania Kubów](https://www.youtube.com/watch?v=zgHim4ZDpZY&t=1908s&ab_channel=CodewithAniaKub%C3%B3w "Ania Kubów") - used as a guide to learn how to fetch API.
+* [Geek Probin](https://www.youtube.com/watch?v=-cX5jnQgqSM&t=418s&ab_channel=GeekProbin "Geek Probin") - used as a guide to understand how to check if answers were correct.
 ---
 ## Inspirations
-* [JavaScript Quiz](https://javascriptquiz.com/)
-* [Lovatts puzzles](https://lovattspuzzles.com/online-puzzles-competitions/ultimate-online-trivia-quiz/)
+* [JavaScript Quiz](https://javascriptquiz.com/ "JavaScript Quiz")
+* [Lovatts puzzles](https://lovattspuzzles.com/online-puzzles-competitions/ultimate-online-trivia-quiz/ "JavaScript Quiz")
