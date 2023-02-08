@@ -80,6 +80,25 @@ Three wireframes shown below are examples of what the content of the page will l
 ---
 ## Features
 
+### Home screen
+The following image is a screenshot of the home screen in desktop view with a hover effect.
+![Home screen desktop view](docs/screenshots/home-screen-desktop.jpg "Home screen desktop view")
+The following image is a screenshot of the home screen in mobile view.
+![Home screen mobile view](docs/screenshots/home-screen-mobile.jpg "Home screen mobile view")
+### Quiz screen
+The following image is a screenshot of the quiz screen in desktop view with a hover effect on the answers.
+![Quiz screen desktop view](docs/screenshots/game-screen-desktop.jpg "Quiz screen desktop view")
+The following image is a screenshot of the quiz screen in mobile view.
+![Quiz screen mobile view](docs/screenshots/game-screen-mobile.jpg "Quiz screen mobile view")
+The following image is a screenshot of the quiz when a correct answer is selected.
+![Quiz screen correct answer](docs/screenshots/game-screen-correct.jpg "Quiz screen correct answer")
+The following image is a screenshot of the quiz when an incorrect answer is selected.
+![Quiz screen incorrect answer](docs/screenshots/game-screen-incorrect.jpg "Quiz screen incorrect answer") 
+### Summary screen
+The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons.
+![Summary screen desktop view](docs/screenshots/summary-screen-desktop.jpg "Summary screen desktop view")
+The following image is a screenshot of the summary screen in mobile view.
+![Summary screen mobile view](docs/screenshots/summary-screen-mobile.jpg "Summary screen mobile view")
 ## Bug Fixes
 | Bug detected | Action |
 |--|--|
