@@ -120,7 +120,7 @@ const checkAnswer = () => {
                 setTimeout(() => {
                     selectedOption.parentElement.classList.remove("correct");
                     genNewQuestion();
-                }, 1000);
+                }, 1300);
 
             } else {
                 selectedOption.parentElement.classList.add("incorrect");
@@ -128,7 +128,7 @@ const checkAnswer = () => {
                 setTimeout(() => {
                     selectedOption.parentElement.classList.remove("incorrect");
                     genNewQuestion();
-                }, 1000);
+                }, 1300);
 
             }
         });
