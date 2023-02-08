@@ -26,7 +26,8 @@
             <button class="difficulty" id="easy" value="easy">Easy</button>
             <button class="difficulty" id="medium" value="medium">Medium</button>
             <button class="difficulty" id="hard" value="hard">Hard</button>
-            <p>Welcome to Quizzically, a quiz designed to test your general knowledge with a variety of difficulties.
+            <p>
+                Welcome to Quizzically, a quiz designed to test your general knowledge with a variety of difficulties.
                 This quiz is perfect for some practise before your local pub quiz and maybe some of those questions will
                 be on here! I won't tell if you won't.
             </p>
@@ -35,7 +36,6 @@
     <!-- Quiz screen -->
     <section id="game" class="hidden">
         <div class="container">
-            <!-- tracking elements relative to quiz gameplay and selection -->
             <div class="HUD">
                 <p id="question-tracker">x</p>
                 <p id="question-difficulty">y</p>
@@ -43,6 +43,7 @@
             </div>
 
             <h2 id="question">This is the question displayed ?</h2>
+
             <div class="answer-box">
                 <p class="option" data-answer="0">This is answer 1</p>
             </div>
@@ -55,31 +56,40 @@
             <div class="answer-box">
                 <p class="option" data-answer="3">This is answer 4</p>
             </div>
-            <!-- returning and end game buttons -->
             <div class="btn">
-                <a href="index.html" aria-label="link to the home page"><i class="fa-solid fa-house"></i></a>
-                <a href="#" aria-label="link to the end the game and go to the summary page" id="end-game-btn"><i
-                        class="fa-solid fa-flag-checkered"></i></a>
+                <a href="index.html" aria-label="link to the home page">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="#" aria-label="link to the end the game and go to the summary page" id="end-game-btn">
+                    <i class="fa-solid fa-flag-checkered"></i>
+                </a>
             </div>
         </div>
     </section>
     <!-- Summary screen -->
     <section id="summary" class="hidden">
         <div class="container">
-            <!-- personalised feedback according to score attained -->
+            
             <p id="congrats">Congratulations!</p>
             <p id="feedback">feedback</p>
-            <span id="trophy"><i class="fa-solid fa-trophy"></i></span>
+            <span id="trophy">
+                <i class="fa-solid fa-trophy"></i>
+            </span>
             <p id="results">Correct answers: </p>
+
             <div class="btn">
-                <!-- social media and home icons -->
-                <a href="https://www.facebook.com" aria-label="link to the qiuz's facebook page" target="_blank"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com" aria-label="link to the qiuz's instagram page" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.twitter.com" aria-label="link to the qiuz's twitter page" target="_blank"><i
-                        class="fa-brands fa-twitter"></i></a>
-                <a href="index.html" aria-label="link to the home page"><i class="fa-solid fa-house"></i></a>
+                <a href="https://www.facebook.com" aria-label="link to the qiuz's facebook page" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" aria-label="link to the qiuz's instagram page" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com" aria-label="link to the qiuz's twitter page" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="index.html" aria-label="link to the home page">
+                    <i class="fa-solid fa-house"></i>
+                </a>
             </div>
         </div>
     </section>
