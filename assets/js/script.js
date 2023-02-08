@@ -42,6 +42,7 @@ const fetchData = (difficulty) => {
         .then(response => response.json())
         .then(data => convertedQuestions(data.results))
         .then((newData) => startQuiz(newData))
+        .catch((error) => console.log(error))
 }
 
 /**
