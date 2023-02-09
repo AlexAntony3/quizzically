@@ -71,7 +71,7 @@ header a {
 
 .container {
     width: 100%;
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 10rem);
     display: grid;
     grid-template-columns: 1fr;
     padding: 1rem;
@@ -192,6 +192,19 @@ header a {
 #results {
     font-size: 2.5rem;
 }
+
+/* footer */
+
+footer {
+    background-color: var(--header);
+    color: var(--background-color);
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+}
+
+
 /* media query for 1000px to make optimal use of large screens */
 @media screen and (min-width: 1000px) {
 
