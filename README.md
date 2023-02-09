@@ -116,20 +116,52 @@ Three wireframes shown below are examples of what the content of the page will l
 ---
 ## Features
 
-### Home screen
-The following image is a screenshot of the home screen in desktop view with a hover effect. The overall theme is clearly visible as being in the brown and neutral shades. The quizzically logo is simple and effective and is present throughout the game, as well as this, when clicked the user can go onto the home screen from any screen. Another feature involved in the home screen are 3 buttons with **easy, medium and hard** settings. This means that the user can pick the difficulty they require and the quiz screen will be started accordingly. Finally the footer is present to give the user a finishing touch to the website. 
+### Header
+* The header is a simple logo with contrasting colours to the rest of the page to make it stand out. Darker colours are used for the background to engage the user in the website and shows a clear distrinction as to what the website is about. 
+* The quizzically logo is also designed to return the user to the home screen as this is the most common practise amonst most modern websites and therefore will be intuitive for the user.
+* This header is consistent throughout the quiz for a better user experience. 
+![Header](docs/screenshots/header.jpg "Header") 
+
+### Home Screen
+The following image is a screenshot of the home screen in desktop view with a hover effect. 
+* The overall theme is clearly visible as being in the brown and neutral shades.
+* The home screen is responsive when loaded in small, large or medium screen sizes. 
 ![Home screen desktop view](docs/screenshots/home-screen-desktop.jpg "Home screen desktop view")
 
 The following image is a screenshot of the home screen in mobile view.
 ![Home screen mobile view](docs/screenshots/home-screen-mobile.jpg "Home screen mobile view")
 
+### Difficulty Buttons
+* Another feature involved in the home screen are 3 buttons with **easy, medium and hard** settings. This means that the user can pick the difficulty they require and the quiz screen will be started accordingly.
+* These buttons have a hover effect as well as a transform effect to feedback to the user that the button has been clicked. 
+![Difficulty Buttons](docs/screenshots/difficulty.jpg "Difficulty Buttons")
+
+### Footer
+* The footer is present to give the user a finishing touch to the website and as the same theme is followed, it allows for a natural end to the page.
+* The copy right information of the quiz is presented here and is consistent throughout the quiz.
+![Footer](docs/screenshots/footer.jpg "Footer")
+
 ### Quiz screen
-The following image is a screenshot of the quiz screen in desktop view with a hover effect on the answers. The theme again is followed throughout however by adding a pink tone to the answer box, it easily distinguishes the answers to the rest of the quiz screen. A heads up display is present where the question progress, difficulty of questions and score tracker is visible. This enables the user to have constant visibility and enables a competitive spirit. Finally for user response, when an answer is clicked, if the answer is correct then the answer box is coloured in green with white font for legibility. When the answer is incorrect the answer box is coloured in red with white font. Finally the last feature of the quiz screen is a button for the home screen and a button to end the game. The home screen button will allow the user to go back to the home page, the end game button will allow the user to go to the summary screen prior to finishing the game. This enables the user to interact with the quiz effectively. 
+The following image is a screenshot of the quiz screen in desktop view.
+* The theme of the website is followed in the quiz screen for consistency. 
 
 ![Quiz screen desktop view](docs/screenshots/game-screen-desktop.jpg "Quiz screen desktop view")
 
 The following image is a screenshot of the quiz screen in mobile view.
 ![Quiz screen mobile view](docs/screenshots/game-screen-mobile.jpg "Quiz screen mobile view")
+
+### HUD
+* A heads up display presents the question progress, difficulty of questions and score tracker. This enables the user to have constant visibility and a competitive spirit is created.
+* The HUD is in a dark font colour to make it stand out of the page.
+![HUD](docs/screenshots/headsupdisplay.jpg "HUD")
+
+### Question and Answers
+* The questions are displayed in a dark font colour to stand out from the background so that the readability of the question is improved.
+* All questions are fetched by using an API and is based on difficulty selected by the user.
+* The answers are presented in a box with a pink tone, this easily distinguishes the answers to the rest of the quiz screen.
+* For user response, when an answer is clicked, if the answer is correct then the answer box is coloured in green with white font for legibility. 
+* When the answer is incorrect the answer box is coloured in red with white font also for improved legibility.
+![Question and Answers](docs/screenshots/questionsandanswers.jpg "Questions and Answers")
 
 The following image is a screenshot of the quiz when a correct answer is selected. 
 ![Quiz screen correct answer](docs/screenshots/game-screen-correct.jpg "Quiz screen correct answer")
@@ -137,12 +169,29 @@ The following image is a screenshot of the quiz when a correct answer is selecte
 The following image is a screenshot of the quiz when an incorrect answer is selected.
 ![Quiz screen incorrect answer](docs/screenshots/game-screen-incorrect.jpg "Quiz screen incorrect answer") 
 
+### Quiz Buttons
+* Finally the last feature of the quiz screen is a button for the home screen and a button to end the game. The home screen button will allow the user to go back to the home page, the end game button will allow the user to go to the summary screen prior to finishing the game. This enables the user to interact with the quiz effectively.  
+* A hover effect is added to both buttons to increase the the user experience of the quiz.
+![Quiz Buttons](docs/screenshots/homeandendbtn.jpg "Quiz Buttons")
+
 ### Summary screen
-The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons. The features present on this screen are results presented according to the score obtained by the user. The responses are displayed below. Furthermore, social media buttons are also presented with the home page button. The social media icons enable the user to follow the relevant social media websites and the home page allows the user to restart the quiz with either a different difficulty or try to beat their own previous score. 
+* The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons. 
+* The features present on this screen are results presented according to the score obtained by the user. The responses are displayed below. 
 ![Summary screen desktop view](docs/screenshots/summary-screen-desktop.jpg "Summary screen desktop view")
 
-The following image are screenshots of the summary screen in mobile view as well as with the responsive feedback from the score obtained. The first image (left) is when a low score < 3 is achieved, the second image (middle) is when a medium score of < 7 is achieved. Finally any score achieved above 7 is presented as shown below (right).
+* The following image are screenshots of the summary screen in mobile view as well as with the responsive feedback from the score obtained. 
+* The first image (left) is when a low score < 3 is achieved 
+* The second image (middle) is when a medium score of < 7 is achieved. 
+* Finally any score achieved above 7 is presented as shown below (right).
 ![Summary screen mobile and responses](docs/screenshots/summary-screen-dispaly.jpg "Summary screen mobile and responses")
+
+### Icons
+The last feature in the quiz is the icons at the end in the summary screen. 
+* Social media buttons are also presented with the home page button. 
+* The social media icons enable the user to follow the relevant social media websites and potentially share their score. 
+* The home page allows the user to restart the quiz with either a different difficulty or try to beat their own previous score. 
+![Icons](docs/screenshots/socialmedia.jpg "Icons")
+
 ## Bug Fixes
 | Bug detected | Action |
 |--|--|
