@@ -2,7 +2,7 @@
 ## Introduction
 
 Welcome to Quizzically, a general knowledge quiz with three degrees of difficulty: **easy, medium and hard**. This quiz is suitable for anyone above the age of 5, and is an interactive website that allows the user to select the correct answer out of **4 multiple choices**. 
-
+![Screen Responsiveness](docs/wireframes/responsiveness-screen.jpg "Screen Responsiveness")
 ---
 ## UX (user experience)
 
