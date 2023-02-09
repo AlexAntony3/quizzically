@@ -6,7 +6,9 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 ![Screen Responsiveness](docs/wireframes/responsiveness-screen.jpg "Screen Responsiveness")
 ---
 ## Table of Contents
+
 - [Quizzically](#quizzically)
+  * [Table of Contents](#table-of-contents)
   * [UX (user experience)](#ux--user-experience-)
     + [Goals](#goals)
     + [User's Stories](#user-s-stories)
@@ -20,9 +22,16 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
     + [Breakpoints](#breakpoints)
     + [Wireframes](#wireframes)
   * [Features](#features)
-    + [Home screen](#home-screen)
+    + [Header](#header)
+    + [Home Screen](#home-screen)
+    + [Difficulty Buttons](#difficulty-buttons)
+    + [Footer](#footer)
     + [Quiz screen](#quiz-screen)
+    + [HUD](#hud)
+    + [Question and Answers](#question-and-answers)
+    + [Quiz Buttons](#quiz-buttons)
     + [Summary screen](#summary-screen)
+    + [Icons](#icons)
   * [Bug Fixes](#bug-fixes)
   * [Unfixable bug](#unfixable-bug)
   * [Potential Future Additions](#potential-future-additions)
@@ -89,6 +98,7 @@ There will two types of icons used for this webpage:
 
 ### Colour Scheme
 The below colour scheme was generated using [Coolor](https://coolors.co/ "Coolers"). Mild and calming colours are used in this quiz as it provides a welcoming feel for the user. Furthermore Complimentary colours are used throughout to marry all the colours together. 
+
 ![Colour Scheme](docs/screenshots/ColourScheme.png "Colour Scheme")
 
 | Colour  | Description |
@@ -107,7 +117,9 @@ No particular breakpoints will be used in the media queries however, the website
 
 
 ### Wireframes
-Three wireframes shown below are examples of what the content of the page will look like when displayed on **large** and **small** screens. The page will be designed in order to be responsive to all sizes and therefore the large screen and medium screen will exhibit the same presentation with proportional scale. Both wireframes were created using [Mockplus RP](https://www.mockplus.com/mockplus-rp "Mockplus RP").
+Three wireframes shown below are examples of what the content of the page will look like when displayed on **large** and **small** screens. The page will be designed in order to be responsive to all sizes and therefore the large screen and medium screen will exhibit the same presentation with proportional scale. Both wireframes were created using 
+
+[Mockplus RP](https://www.mockplus.com/mockplus-rp "Mockplus RP").
 
 [Large/Medium Screen](docs/wireframes/large-screen.jpg "Large/Medium Screen")
 
@@ -120,25 +132,30 @@ Three wireframes shown below are examples of what the content of the page will l
 * The header is a simple logo with contrasting colours to the rest of the page to make it stand out. Darker colours are used for the background to engage the user in the website and shows a clear distrinction as to what the website is about. 
 * The quizzically logo is also designed to return the user to the home screen as this is the most common practise amonst most modern websites and therefore will be intuitive for the user.
 * This header is consistent throughout the quiz for a better user experience. 
+
 ![Header](docs/screenshots/header.jpg "Header") 
 
 ### Home Screen
 The following image is a screenshot of the home screen in desktop view with a hover effect. 
 * The overall theme is clearly visible as being in the brown and neutral shades.
 * The home screen is responsive when loaded in small, large or medium screen sizes. 
+
 ![Home screen desktop view](docs/screenshots/home-screen-desktop.jpg "Home screen desktop view")
 
 The following image is a screenshot of the home screen in mobile view.
+
 ![Home screen mobile view](docs/screenshots/home-screen-mobile.jpg "Home screen mobile view")
 
 ### Difficulty Buttons
 * Another feature involved in the home screen are 3 buttons with **easy, medium and hard** settings. This means that the user can pick the difficulty they require and the quiz screen will be started accordingly.
 * These buttons have a hover effect as well as a transform effect to feedback to the user that the button has been clicked. 
+
 ![Difficulty Buttons](docs/screenshots/difficulty.jpg "Difficulty Buttons")
 
 ### Footer
 * The footer is present to give the user a finishing touch to the website and as the same theme is followed, it allows for a natural end to the page.
 * The copy right information of the quiz is presented here and is consistent throughout the quiz.
+
 ![Footer](docs/screenshots/footer.jpg "Footer")
 
 ### Quiz screen
@@ -148,11 +165,13 @@ The following image is a screenshot of the quiz screen in desktop view.
 ![Quiz screen desktop view](docs/screenshots/game-screen-desktop.jpg "Quiz screen desktop view")
 
 The following image is a screenshot of the quiz screen in mobile view.
+
 ![Quiz screen mobile view](docs/screenshots/game-screen-mobile.jpg "Quiz screen mobile view")
 
 ### HUD
 * A heads up display presents the question progress, difficulty of questions and score tracker. This enables the user to have constant visibility and a competitive spirit is created.
 * The HUD is in a dark font colour to make it stand out of the page.
+
 ![HUD](docs/screenshots/headsupdisplay.jpg "HUD")
 
 ### Question and Answers
@@ -161,6 +180,7 @@ The following image is a screenshot of the quiz screen in mobile view.
 * The answers are presented in a box with a pink tone, this easily distinguishes the answers to the rest of the quiz screen.
 * For user response, when an answer is clicked, if the answer is correct then the answer box is coloured in green with white font for legibility. 
 * When the answer is incorrect the answer box is coloured in red with white font also for improved legibility.
+
 ![Question and Answers](docs/screenshots/questionsandanswers.jpg "Questions and Answers")
 
 The following image is a screenshot of the quiz when a correct answer is selected. 
@@ -172,17 +192,20 @@ The following image is a screenshot of the quiz when an incorrect answer is sele
 ### Quiz Buttons
 * Finally the last feature of the quiz screen is a button for the home screen and a button to end the game. The home screen button will allow the user to go back to the home page, the end game button will allow the user to go to the summary screen prior to finishing the game. This enables the user to interact with the quiz effectively.  
 * A hover effect is added to both buttons to increase the the user experience of the quiz.
+
 ![Quiz Buttons](docs/screenshots/homeandendbtn.jpg "Quiz Buttons")
 
 ### Summary screen
 * The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons. 
 * The features present on this screen are results presented according to the score obtained by the user. The responses are displayed below. 
+
 ![Summary screen desktop view](docs/screenshots/summary-screen-desktop.jpg "Summary screen desktop view")
 
 * The following image are screenshots of the summary screen in mobile view as well as with the responsive feedback from the score obtained. 
 * The first image (left) is when a low score < 3 is achieved 
 * The second image (middle) is when a medium score of < 7 is achieved. 
 * Finally any score achieved above 7 is presented as shown below (right).
+
 ![Summary screen mobile and responses](docs/screenshots/summary-screen-dispaly.jpg "Summary screen mobile and responses")
 
 ### Icons
@@ -190,6 +213,7 @@ The last feature in the quiz is the icons at the end in the summary screen.
 * Social media buttons are also presented with the home page button. 
 * The social media icons enable the user to follow the relevant social media websites and potentially share their score. 
 * The home page allows the user to restart the quiz with either a different difficulty or try to beat their own previous score. 
+
 ![Icons](docs/screenshots/socialmedia.jpg "Icons")
 
 ## Bug Fixes
