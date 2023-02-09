@@ -105,9 +105,8 @@ The following image is a screenshot of the quiz when an incorrect answer is sele
 The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons. The features present on this screen are results presented according to the score obtained by the user. The responses are displayed below. Furthermore, social media buttons are also presented with the home page button. The social media icons enable the user to follow the relevant social media websites and the home page allows the user to restart the quiz with either a different difficulty or try to beat their own previous score. 
 ![Summary screen desktop view](docs/screenshots/summary-screen-desktop.jpg "Summary screen desktop view")
 
-The following image is a screenshot of the summary screen in mobile view.
-![Summary screen mobile view](docs/screenshots/summary-screen-mobile.jpg "Summary screen mobile view")
-
+The following image are screenshots of the summary screen in mobile view as well as with the responsive feedback from the score obtained. The first image (left) is when a low score < 3 is achieved, the second image (middle) is when a medium score of < 7 is achieved. Finally any score achieved above 7 is presented as shown below (right).
+![Summary screen mobile and responses](docs/screenshots/summary-screen-dispaly.jpg "Summary screen mobile and responses")
 ## Bug Fixes
 | Bug detected | Action |
 |--|--|
