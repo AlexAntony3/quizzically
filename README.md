@@ -81,27 +81,28 @@ Three wireframes shown below are examples of what the content of the page will l
 ## Features
 
 ### Home screen
-The following image is a screenshot of the home screen in desktop view with a hover effect.
+The following image is a screenshot of the home screen in desktop view with a hover effect. The overall theme is clearly visible as being in the brown and neutral shades. The quizzically logo is simple and effective and is present throughout the game, as well as this, when clicked the user can go onto the home screen from any screen. Another feature involved in the home screen are 3 buttons with **easy, medium and hard** settings. This means that the user can pick the difficulty they require and the quiz screen will be started accordingly. 
 ![Home screen desktop view](docs/screenshots/home-screen-desktop.jpg "Home screen desktop view")
 
 The following image is a screenshot of the home screen in mobile view.
 ![Home screen mobile view](docs/screenshots/home-screen-mobile.jpg "Home screen mobile view")
 
 ### Quiz screen
-The following image is a screenshot of the quiz screen in desktop view with a hover effect on the answers.
+The following image is a screenshot of the quiz screen in desktop view with a hover effect on the answers. The theme again is followed throughout however by adding a pink tone to the answer box, it easily distinguishes the answers to the rest of the quiz screen. A heads up display is present where the question progress, difficulty of questions and score tracker is visible. This enables the user to have constant visibility and enables a competitive spirit. Finally for user response, when an answer is clicked, if the answer is correct then the answer box is coloured in green with white font for legibility. When the answer is incorrect the answer box is coloured in red with white font. Finally the last feature of the quiz screen is a button for the home screen and a button to end the game. The home screen button will allow the user to go back to the home page, the end game button will allow the user to go to the summary screen prior to finishing the game. This enables the user to interact with the quiz effectively. 
+
 ![Quiz screen desktop view](docs/screenshots/game-screen-desktop.jpg "Quiz screen desktop view")
 
 The following image is a screenshot of the quiz screen in mobile view.
 ![Quiz screen mobile view](docs/screenshots/game-screen-mobile.jpg "Quiz screen mobile view")
 
-The following image is a screenshot of the quiz when a correct answer is selected.
+The following image is a screenshot of the quiz when a correct answer is selected. 
 ![Quiz screen correct answer](docs/screenshots/game-screen-correct.jpg "Quiz screen correct answer")
 
 The following image is a screenshot of the quiz when an incorrect answer is selected.
 ![Quiz screen incorrect answer](docs/screenshots/game-screen-incorrect.jpg "Quiz screen incorrect answer") 
 
 ### Summary screen
-The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons.
+The following image is a screenshot of the summary screen in desktop view with a hover effect on the buttons. The features present on this screen are results presented according to the score obtained by the user. The responses are displayed below. Furthermore, social media buttons are also presented with the home page button. The social media icons enable the user to follow the relevant social media websites and the home page allows the user to restart the quiz with either a different difficulty or try to beat their own previous score. 
 ![Summary screen desktop view](docs/screenshots/summary-screen-desktop.jpg "Summary screen desktop view")
 
 The following image is a screenshot of the summary screen in mobile view.
