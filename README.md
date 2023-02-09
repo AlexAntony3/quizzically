@@ -16,10 +16,10 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 
 ### User's Stories
 * As a user, I want to be able to pick my required level of difficulty. 
-* As a user, I want to be able to be able to see tally of incorrect and correct answers.
+* As a user, I want to be able to be able to see tally of correct answers.
 * As a user, I want to be able to be able to see if my answer is incorrect when submitted. 
 * As a user, I want to be able to reset my quiz and pick different degrees of difficulty.
-* As a user, I want to be able to retry a quiz and not having repeating questions. 
+* As a user, I want to be able to retry a quiz and not having the exact same questions again.
 
 ### Site Owner's Goals
 * I want to be able to provide challenge user's with the questions. 
@@ -28,15 +28,15 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 * I want to offer the user an interactive way to select the answer. 
 
 ### Expectation
-* I expect visibility of a tally of correct and incorrect answers. 
+* I expect visibility of a tally of correct answers. 
 * I expect multiple choice answers to be presented to the user, one of which is correct.
-* I expect the reset button to function correctly to restart the quiz with different questions.
+* I expect the end game button to function correctly to get to the end screen prior to finishing the questions.
 * I expect contrasting elements to stand out when compared to the background. 
 * I expect when the logo is clicked, the page is refreshed. 
 
 ### Requirements
 * The quiz must present questions according to the difficulty level selected.
-* The quiz must tally the score of incorrect and correct answers. 
+* The quiz must tally the score of correct answers. 
 * The page must be easy to read.
 * The quiz must be interactive and have effects when answers are hovered over.
 * All transitions of the page must be consistent throughout.
@@ -82,7 +82,7 @@ Three wireframes shown below are examples of what the content of the page will l
 ## Features
 
 ### Home screen
-The following image is a screenshot of the home screen in desktop view with a hover effect. The overall theme is clearly visible as being in the brown and neutral shades. The quizzically logo is simple and effective and is present throughout the game, as well as this, when clicked the user can go onto the home screen from any screen. Another feature involved in the home screen are 3 buttons with **easy, medium and hard** settings. This means that the user can pick the difficulty they require and the quiz screen will be started accordingly. 
+The following image is a screenshot of the home screen in desktop view with a hover effect. The overall theme is clearly visible as being in the brown and neutral shades. The quizzically logo is simple and effective and is present throughout the game, as well as this, when clicked the user can go onto the home screen from any screen. Another feature involved in the home screen are 3 buttons with **easy, medium and hard** settings. This means that the user can pick the difficulty they require and the quiz screen will be started accordingly. Finally the footer is present to give the user a finishing touch to the website. 
 ![Home screen desktop view](docs/screenshots/home-screen-desktop.jpg "Home screen desktop view")
 
 The following image is a screenshot of the home screen in mobile view.
@@ -184,8 +184,10 @@ The following image are screenshots of the summary screen in mobile view as well
 
 ### Lighthouse testing
 
+Desktop lighthouse Testing
 ![Desktop lighthouse testing](docs/screenshots/lighthouse-desktop.jpg "Desktop lighthouse testing")
 
+Mobile lighthouse Testing
 ![Mobile lighthouse testing](docs/screenshots/lighthouse-mobile.jpg "Mobile lighthouse testing")
 ## Deployments
 Post completion of coding, the project was added, committed and pushed to github. The github repository was made live completing the following steps:
