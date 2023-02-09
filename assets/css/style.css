@@ -163,10 +163,12 @@ header a {
 
 .correct {
     background-color: var(--correct) !important;
+    color: var(--background-color);
 }
 
 .incorrect {
     background-color: var(--incorrect) !important;
+    color: var(--background-color);
 }
 
 /* hiding elements in the game */
