@@ -172,21 +172,21 @@ The following image are screenshots of the summary screen in mobile view as well
 
 ### W3C CSS validator
 
-[CSS validation testing](docs/screenshots/css-testing.png "CSS Validation testing")
+![CSS validation testing](docs/screenshots/css-testing.png "CSS Validation testing")
 
 ### W3C HTML validator
 
-[HTML validation testing](docs/screenshots/html-testing.jpg "HTML validation testing")
+![HTML validation testing](docs/screenshots/html-testing.jpg "HTML validation testing")
 
 ### Jshint validation
 
-[JavaScript validation testing](docs/screenshots/js-testing.jpg "JavaScript validation testing")
+![JavaScript validation testing](docs/screenshots/js-testing.jpg "JavaScript validation testing")
 
 ### Lighthouse testing
 
-[Desktop lighthouse testing](docs/screenshots/lighthouse-desktop.jpg "Desktop lighthouse testing")
+![Desktop lighthouse testing](docs/screenshots/lighthouse-desktop.jpg "Desktop lighthouse testing")
 
-[Mobile lighthouse testing](docs/screenshots/lighthouse-mobile.jpg "Mobile lighthouse testing")
+![Mobile lighthouse testing](docs/screenshots/lighthouse-mobile.jpg "Mobile lighthouse testing")
 ## Deployments
 Post completion of coding, the project was added, committed and pushed to github. The github repository was made live completing the following steps:
 
