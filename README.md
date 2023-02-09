@@ -5,6 +5,41 @@ Welcome to Quizzically, a general knowledge quiz with three degrees of difficult
 
 ![Screen Responsiveness](docs/wireframes/responsiveness-screen.jpg "Screen Responsiveness")
 ---
+## Table of Contents
+- [Quizzically](#quizzically)
+  * [UX (user experience)](#ux--user-experience-)
+    + [Goals](#goals)
+    + [User's Stories](#user-s-stories)
+    + [Site Owner's Goals](#site-owner-s-goals)
+    + [Expectation](#expectation)
+    + [Requirements](#requirements)
+  * [Design](#design)
+    + [Icon](#icon)
+    + [Font](#font)
+    + [Colour Scheme](#colour-scheme)
+    + [Breakpoints](#breakpoints)
+    + [Wireframes](#wireframes)
+  * [Features](#features)
+    + [Home screen](#home-screen)
+    + [Quiz screen](#quiz-screen)
+    + [Summary screen](#summary-screen)
+  * [Bug Fixes](#bug-fixes)
+  * [Unfixable bug](#unfixable-bug)
+  * [Potential Future Additions](#potential-future-additions)
+  * [Technologies used](#technologies-used)
+    + [Languages](#languages)
+    + [Libraries](#libraries)
+    + [Tools](#tools)
+  * [Testing](#testing)
+    + [W3C CSS validator](#w3c-css-validator)
+    + [W3C HTML validator](#w3c-html-validator)
+    + [Jshint validation](#jshint-validation)
+    + [Lighthouse testing](#lighthouse-testing)
+  * [Concluding statements](#concluding-statements)
+  * [Deployments](#deployments)
+  * [Credits](#credits)
+  * [Inspirations](#inspirations)
+
 ## UX (user experience)
 
 ### Goals
@@ -189,6 +224,12 @@ Desktop lighthouse Testing
 
 Mobile lighthouse Testing
 ![Mobile lighthouse testing](docs/screenshots/lighthouse-mobile.jpg "Mobile lighthouse testing")
+
+As seen above, all testing has successfully passed all requirements and validation with no errors dispalyed. 
+
+## Concluding statements
+All user experience aspects described at the start of this readme has been met. The quiz is interactive, responsive and easy on the eye. The user is left to want more after finishing their first game with either a harder difficulty or to beat their own score. As the developer, I found that even **easy** is pretty difficult for me, all it means is that I need to brush up on my general knowledge. 
+
 ## Deployments
 Post completion of coding, the project was added, committed and pushed to github. The github repository was made live completing the following steps:
 
