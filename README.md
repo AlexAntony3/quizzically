@@ -220,9 +220,11 @@ The following image are screenshots of the summary screen in mobile view as well
 ### Lighthouse testing
 
 Desktop lighthouse Testing
+
 ![Desktop lighthouse testing](docs/screenshots/lighthouse-desktop.jpg "Desktop lighthouse testing")
 
 Mobile lighthouse Testing
+
 ![Mobile lighthouse testing](docs/screenshots/lighthouse-mobile.jpg "Mobile lighthouse testing")
 
 As seen above, all testing has successfully passed all requirements and validation with no errors dispalyed. 
